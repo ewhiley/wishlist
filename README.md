@@ -15,15 +15,12 @@ https://github.com/ewhiley/rails-marketplace
 Date | Project task
 ------------ | -------------
 **Week 1** |  | 
-----------------------------
 Monday | |
 Tuesday|  |
 Wednesday | |
 Thursday | |
 Friday | |
-
 **Week 2** | |
-----------------------------
 Monday | |
 Monday | |
 Tuesday|  |
