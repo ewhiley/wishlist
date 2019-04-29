@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rails marketplace app
+Repository for the Rails project. 
 
-Things you may want to cover:
+## Deployed app
+https://agile-hamlet-55236.herokuapp.com
 
-* Ruby version
+## Github repository
+https://github.com/ewhiley/rails-marketplace
 
-* System dependencies
+## Details of planning process
+### Project plan & timeline
 
-* Configuration
+Date | Project task
+------------ | -------------
+Week 1 |  | 
+Day 2 | |
+Day 3 |  |
+Day 4 | |
+Day 5 | |
 
-* Database creation
+### Screenshots of Trello board(s)
+The Trello board helped me keep track of all the tasks required for the assessment. 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Short Answer Q&A - Include short answers to the following questions,
