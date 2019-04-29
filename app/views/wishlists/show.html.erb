@@ -1,3 +1,8 @@
 <h1>New Wishlist Show</h1>
 
-<%= @wishlist.name %>
+<p><%= @wishlist.name %></p>
+<p><%= @wishlist.description %></p>
+<p><%= @wishlist.price %></p>
+<% @wishlist.categories.each do |c| %>
+  <p><%= c.name %></p>
+<% end %>

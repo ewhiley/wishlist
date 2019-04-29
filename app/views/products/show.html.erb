@@ -1,3 +1,8 @@
 <h1>Show</h1>
 
-<%= @product.name %>
+<p><%= @product.name %></p>
+<p><%= @product.description %></p>
+<p><%= @product.price %></p>
+<% @product.categories.each do |c| %>
+  <p><%= c.name %></p>
+<% end %>

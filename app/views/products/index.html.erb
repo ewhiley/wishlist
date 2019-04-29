@@ -1,8 +1,8 @@
-<h1>All products</h1>
+<h1>My Products</h1>
 
-<h3>test</h3>
 
 <% @user.products.each do |product| %>
 
   <%= product.name %>
+  <%= link_to "Show Product", product_path(product)%>
 <% end %>
