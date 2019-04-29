@@ -36,7 +36,7 @@ class WishlistsController < ApplicationController
     @w_cat_ids = @wishlist_categories.ids
     @products = Product.all
     @products.each do |product|
-      if (product.categories.ids & @w_cat_ids).any?
+      if (product.categories.ids & @w_cat_ids).any? && product.user_id != @wishlist.user.id
         @matches << product
       end
     end
