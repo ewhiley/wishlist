@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
+    @user = current_user
   end
 
   def new
@@ -23,10 +24,11 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @product = Product.find(params[:id])
   end
 
   private
   def product_params
-    params.permit(:name, :description, :price, images: [], category_ids: [])
+    params.require(:product).permit(:name, :description, :price, images: [], category_ids: [])
   end
 end

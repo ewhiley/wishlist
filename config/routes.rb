@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  root 'home#index'
   devise_for :users, controllers: { confirmations: 'confirmations' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :products
   resources :categories
   resources :wishlists
 
-  root 'products#index'
+  # get '/users/:id/products', to: 'users#products', as: 'user_products'
+  get '/users/:id/wishlists', to: 'users#wishlists', as: 'user_wishlists'
+
+  get '/products', to: 'products#index', as: 'my_product'
 end

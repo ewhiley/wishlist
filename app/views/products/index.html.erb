@@ -2,4 +2,7 @@
 
 <h3>test</h3>
 
-<%= link_to 'New Product', new_product_path %>
+<% @user.products.each do |product| %>
+
+  <%= product.name %>
+<% end %>
