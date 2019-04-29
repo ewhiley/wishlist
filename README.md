@@ -14,13 +14,24 @@ https://github.com/ewhiley/rails-marketplace
 
 Date | Project task
 ------------ | -------------
-Week 1 |  | 
-Day 2 | |
-Day 3 |  |
-Day 4 | |
-Day 5 | |
+**Week 1** |  | 
+----------------------------
+Monday | |
+Tuesday|  |
+Wednesday | |
+Thursday | |
+Friday | |
+
+**Week 2** | |
+----------------------------
+Monday | |
+Monday | |
+Tuesday|  |
+Wednesday | |
+Thursday | |
+Friday | |
+
 
 ### Screenshots of Trello board(s)
-The Trello board helped me keep track of all the tasks required for the assessment. 
 
 ## Short Answer Q&A - Include short answers to the following questions,
