@@ -16,8 +16,14 @@ class ProductsController < ApplicationController
 
     category = Category.find(params[:category_id1])
     category2 = Category.find(params[:category_id2])
+    category3 = Category.find(params[:category_id3])
+    category4 = Category.find(params[:category_id4])
+    category5 = Category.find(params[:category_id5])
     @product.categories << category
     @product.categories << category2
+    @product.categories << category3
+    @product.categories << category4
+    @product.categories << category5
     @product.save
 
     redirect_to product_path(@product)
