@@ -1,7 +1,10 @@
-<h1>New Wishlist Show</h1>
+<h1>Wishlist Show</h1>
 
 <%= @wishlist.user.id %>
-
+<p><%= link_to "Edit Wishlist Details", edit_wishlist_path(@wishlist) %></p>
+<p><%= link_to 'Delete Wishlist', wishlist_path(@wishlist),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></p>
 <p><%= @wishlist.name %></p>
 <p><%= @wishlist.description %></p>
 <p><%= @wishlist.price %></p>

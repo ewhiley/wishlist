@@ -36,13 +36,13 @@ class ProductsController < ApplicationController
   def edit
     @product = Product.find(params[:id])
     @categories = Category.all.map{|c| [ c.name, c.id ] }
-
   end
 
   def update
     @product = Product.find(params[:id])
    
     if @product.update(product_params)
+      flash[:notice] = "Product successfully updated"
       redirect_to @product
     else
       render 'edit'

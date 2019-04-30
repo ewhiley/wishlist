@@ -42,6 +42,31 @@ class WishlistsController < ApplicationController
     end
   end
 
+  def edit
+    @wishlist = Wishlist.find(params[:id])
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
+  end
+
+  def update
+    @wishlist = Wishlist.find(params[:id])
+   
+    if @wishlist.update(wishlist_params)
+      flash[:notice] = "Wishlist successfully updated"
+      redirect_to @wishlist
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @wishlist = Wishlist.find(params[:id])
+    @wishlist.destroy
+    flash[:alert] = "Wishlist was successfully deleted"
+    
+    redirect_to wishlists_path
+  end
+
+
   private
   def wishlist_params
     params.require(:wishlist).permit(:name, :description, :price, images: [], category_ids: [])
