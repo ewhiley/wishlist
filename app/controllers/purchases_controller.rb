@@ -8,6 +8,7 @@ class PurchasesController < ApplicationController
     # Amount in cents
     @user = User.find_by email: params[:stripeEmail]
     @product = Product.find(params[:format])
+    @wishlist = Wishlist.find(params[:wishlist_id])
     @amount = ((@product.price) * 100).to_i
 
     customer = Stripe::Customer.create({
