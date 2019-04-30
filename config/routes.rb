@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :products
   resources :categories
   resources :wishlists
+  resources :purchases
 
   # get '/users/:id/products', to: 'users#products', as: 'user_products'
   get '/users/:id/wishlists', to: 'users#wishlists', as: 'user_wishlists'

@@ -12,4 +12,9 @@
   <p><%= c.name %></p>
 <% end %>
 
-<%= @matches %>
+<% @matches.each do |match| %>
+  <p><%= match.name %></p>
+  <p><%= match.description %></p>
+  <p><%= match.price %></p>
+  <p><%= link_to "Checkout", purchase_path(match) %></p>
+<% end %>
