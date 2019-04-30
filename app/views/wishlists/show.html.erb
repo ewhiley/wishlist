@@ -16,5 +16,5 @@
   <p><%= match.name %></p>
   <p><%= match.description %></p>
   <p>$<%= '%.2f' % match.price %></p>
-  <p><%= link_to "Checkout", purchase_path(match) %></p>
+  <p><%= link_to "Checkout", wishlist_purchase_path(@wishlist, match) %></p>
 <% end %>
