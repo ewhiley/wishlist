@@ -3,6 +3,9 @@
 <p><%= @product.name %></p>
 <p><%= @product.description %></p>
 <p><%= @product.price %></p>
+<% @product.images.each do |image| %>
+  <%= image_tag image %>
+<% end %>
 <% @product.categories.each do |c| %>
   <p><%= c.name %></p>
 <% end %>
