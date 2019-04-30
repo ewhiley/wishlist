@@ -2,5 +2,4 @@
 
 <p><%= @product.name %></p>
 <p><%= @product.description %></p>
-<p>$<%= @product.price %></p>
-<%= link_to "Buy Now",   %>
+<%= render 'layouts/shared/stripe.html.erb', obj: @product %>
