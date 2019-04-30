@@ -22,7 +22,7 @@ Thursday | Views, Styling |
 Friday | Finalising MVP |
 **Week 2** | |
 Monday | Additional functionality |
-Tuesday| Additional functionality  |
+Tuesday | Additional functionality  |
 Wednesday | Additional functionality |
 Thursday | README |
 Friday | README, presentaion |
