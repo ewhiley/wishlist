@@ -1,2 +1,24 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+
+<% if user_signed_in? == false %>
+  <% @products.each do |product| %>
+    <% if product.sold == false %>
+      <div>
+        <p><%= product.name %></p>
+        <p><%= product.description %></p>
+        <p><%= '%.2f' % product.price %></p>
+      </div>
+    <% end %>
+  <%end %>
+<% elsif user_signed_in? == true %>
+   <% @products.each do |product| %>
+    <% if product.sold == false && product.user_id != current_user.id%>
+      <div>
+        <p><%= product.name %></p>
+        <p><%= product.description %></p>
+        <p><%= '%.2f' % product.price %></p>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
