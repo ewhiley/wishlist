@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :products
   resources :categories
-  resources :wishlists
+  resources :wishlists do
+    resources :purchases
+  end
 
   # get '/users/:id/products', to: 'users#products', as: 'user_products'
   get '/users/:id/wishlists', to: 'users#wishlists', as: 'user_wishlists'

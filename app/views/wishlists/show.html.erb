@@ -7,9 +7,14 @@
               data: { confirm: 'Are you sure?' } %></p>
 <p><%= @wishlist.name %></p>
 <p><%= @wishlist.description %></p>
-<p><%= @wishlist.price %></p>
+<p>$<%= '%.2f' % @wishlist.price %></p>
 <% @wishlist.categories.each do |c| %>
   <p><%= c.name %></p>
 <% end %>
 
-<%= @matches %>
+<% @matches.each do |match| %>
+  <p><%= match.name %></p>
+  <p><%= match.description %></p>
+  <p>$<%= '%.2f' % match.price %></p>
+  <p><%= link_to "Checkout", wishlist_purchase_path(@wishlist, match) %></p>
+<% end %>

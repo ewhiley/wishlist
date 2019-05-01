@@ -28,3 +28,5 @@
 /config/master.key
 
 /config/environments/development.rb
+
+/config/credentials.yml.enc
