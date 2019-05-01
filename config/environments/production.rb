@@ -100,7 +100,7 @@ Rails.application.configure do
     address:              'smtp.mailgun.org',
     port:                 587,
     domain:               Rails.application.credentials.mailgun[:domain_name],
-    user_name:            Rails.application.credentials.mailgun[:mailgun_user_name],
+    user_name:            Rails.application.credentials.mailgun[:mail_user_name],
     password:             Rails.application.credentials.mailgun[:mailgun_password],
     authentication:       'plain',
     enable_starttls_auto: true }
