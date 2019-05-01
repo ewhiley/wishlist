@@ -22,8 +22,8 @@ class PurchasesController < ApplicationController
       description: 'Rails Stripe customer',
       currency: 'aud',
     })
-
-
+    byebug
+    # @purchase = Purchase.new()
     
     flash[:notice] = "Thank you for your purchase! We hope you enjoy #{@product.name}"
 
@@ -32,5 +32,10 @@ class PurchasesController < ApplicationController
     flash[:error] = e.message
     redirect_to purchase_path(@product)
   end
+
+  # private
+  # def purchase_params
+  #   params.
+  # end
 
 end

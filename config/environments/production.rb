@@ -39,7 +39,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :local
+  config.active_storage.service = :amazon
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
@@ -100,7 +100,7 @@ Rails.application.configure do
     address:              'smtp.mailgun.org',
     port:                 587,
     domain:               Rails.application.credentials.mailgun[:domain_name],
-    user_name:            Rails.application.credentials.mailgun[:mailgun_user_name],
+    user_name:            Rails.application.credentials.mailgun[:mail_user_name],
     password:             Rails.application.credentials.mailgun[:mailgun_password],
     authentication:       'plain',
     enable_starttls_auto: true }
