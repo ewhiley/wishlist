@@ -8,9 +8,7 @@
   <p><%= form.label :price %> $
   <%= form.number_field(:price, min: 1.00, step: 0.01)%></p><br><br>
   <%= form.file_field :images, multiple: true %><br>
-  <% Category.all.each do |category| %>
-    <p><%= category.name%></p>
-  <% end %>
+ 
   <%= form.label :category %>
   <%#= form.text_field :category_ids, multiple: true %>
   <%= select_tag(:category_id1, options_for_select(@categories)) %>
