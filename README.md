@@ -14,8 +14,6 @@ https://github.com/ewhiley/wishlist
 **NEED TO COMPLETE THIS SECTION**
 
 ### Problem definition / purpose
-![image](https://user-images.githubusercontent.com/31295147/57001876-847a8d00-6bfe-11e9-8673-34cb9ebf721e.png)
-
 
 ### Functionality / features
 
@@ -45,6 +43,7 @@ Thursday | README |
 Friday | README, presentaion |
 
 ### Screenshots of Trello board(s)
+<img width="1254" alt="Trello board" src="https://user-images.githubusercontent.com/31295147/57002511-49c72380-6c03-11e9-85bc-113ff6804202.png">
 
 ## Design documentation
 
