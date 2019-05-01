@@ -1,20 +1,21 @@
 <h1>Wishlist Show</h1>
+<% if @wishlist.completed == false %>
+  <%= @wishlist.user.id %>
+  <p><%= link_to "Edit Wishlist Details", edit_wishlist_path(@wishlist) %></p>
+  <p><%= link_to 'Delete Wishlist', wishlist_path(@wishlist),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></p>
+  <p><%= @wishlist.name %></p>
+  <p><%= @wishlist.description %></p>
+  <p>$<%= '%.2f' % @wishlist.price %></p>
+  <% @wishlist.categories.each do |c| %>
+    <p><%= c.name %></p>
+  <% end %>
 
-<%= @wishlist.user.id %>
-<p><%= link_to "Edit Wishlist Details", edit_wishlist_path(@wishlist) %></p>
-<p><%= link_to 'Delete Wishlist', wishlist_path(@wishlist),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></p>
-<p><%= @wishlist.name %></p>
-<p><%= @wishlist.description %></p>
-<p>$<%= '%.2f' % @wishlist.price %></p>
-<% @wishlist.categories.each do |c| %>
-  <p><%= c.name %></p>
-<% end %>
-
-<% @matches.each do |match| %>
-  <p><%= match.name %></p>
-  <p><%= match.description %></p>
-  <p>$<%= '%.2f' % match.price %></p>
-  <p><%= link_to "Checkout", wishlist_purchase_path(@wishlist, match) %></p>
+  <% @matches.each do |match| %>
+    <p><%= match.name %></p>
+    <p><%= match.description %></p>
+    <p>$<%= '%.2f' % match.price %></p>
+    <p><%= link_to "Checkout", wishlist_purchase_path(@wishlist, match) %></p>
+  <% end %>
 <% end %>

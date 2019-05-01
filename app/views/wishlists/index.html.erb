@@ -1,7 +1,8 @@
 <h1>My Wishlists</h1>
 
 <% @user.wishlists.each do |wishlist| %>
-
-  <%= wishlist.name %>
-  <%= link_to "Show Wishlist", wishlist_path(wishlist)%>
+  <% if wishlist.completed == false %>
+    <%= wishlist.name %>
+    <%= link_to "Show Wishlist", wishlist_path(wishlist)%> 
+  <% end %>
 <% end %>
