@@ -50,10 +50,12 @@ Friday | README, presentaion |
 ### Design process
 
 ### User stories and workflow diagram of the user journey/s.
+<img width="695" alt="User stories and user journeys" src="https://user-images.githubusercontent.com/31295147/57003366-87c74600-6c09-11e9-886f-77f5d61404f9.png">
 
 ### Wireframes and moodbard
 
 ### Database Entity Relationship Diagrams
+![Entity relationship diagram](https://user-images.githubusercontent.com/31295147/57003582-2b652600-6c0b-11e9-9533-559735c9e9bc.png)
 
 ## Short Answer Q&A - Include short answers to the following questions
 
