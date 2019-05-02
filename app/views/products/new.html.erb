@@ -9,12 +9,21 @@
   <%= form.number_field(:price, min: 1.00, step: 0.01)%></p><br><br>
   <%= form.file_field :images, multiple: true %><br>
  
-  <%= form.label :category %>
+  <%= form.label :category_ids %>
+  <div class="field">
+    <%#= form.collection_select :category_ids, Category.order(:name), :id, :name, {}, {multiple: true} %>
+    <%= form.select :category_ids,
+      Category.all.map { |k| [k.name, k.id] },
+                      { include_blank: true },
+                      { :multiple => true, class: 'chosen-select' }
+    %>
+  </div>
+  <%#= form.select :category, options_for_select(Category.all), {:include_blank => true}, {:multiple => true} %>
   <%#= form.text_field :category_ids, multiple: true %>
-  <%= select_tag(:category_id1, options_for_select(@categories)) %>
-  <%= select_tag(:category_id2, options_for_select(@categories)) %>
-  <%= select_tag(:category_id3, options_for_select(@categories)) %>
-  <%= select_tag(:category_id4, options_for_select(@categories)) %>
-  <%= select_tag(:category_id5, options_for_select(@categories)) %>
+  <%# <%= select_tag(:category_id1, options_for_select(@categories)) %>
+  <%#= select_tag(:category_id2, options_for_select(@categories)) %>
+  <%#= select_tag(:category_id3, options_for_select(@categories)) %>
+  <%#= select_tag(:category_id4, options_for_select(@categories)) %>
+  <%#= select_tag(:category_id5, options_for_select(@categories)) %>
   <%= form.submit %>
 <% end %>
