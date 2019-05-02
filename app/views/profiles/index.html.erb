@@ -1,0 +1,18 @@
+<h1>My Profile</h1>
+
+<% if @user.profile == nil %>
+  <%= form_with model: @product, local: true  do |form| %>
+    <p><%= form.label :name %>
+    <%= form.text_field :name %></p><br><br>
+    <p><%= form.label :description %>
+    <%= form.text_area :description %></p><br><br>
+    <p><%= form.label :price %> $
+    <%= form.file_field :images, multiple: true %><br>
+    <%# <% Category.all.each do |category| %>
+      <%#= category.name%>
+    <%# end %>
+    <%= form.label :category %>
+    <%#= form.text_field :category_ids, multiple: true %>
+    <%= form.submit %>
+  <% end %>
+<% end %>
