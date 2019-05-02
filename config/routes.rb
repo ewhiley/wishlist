@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   get '/products', to: 'products#index', as: 'my_products'
   get '/wishlists', to: 'wishlists#index', as: 'my_wishlists'
+  get '/profile', to: 'profiles#index', as: 'my_profile'
 end
