@@ -7,8 +7,6 @@
   <%= form.text_area :description %></div><br><br>
   <div><%= form.label :price %> $
   <%= form.number_field(:price, min: 1.00, step: 0.01)%></div><br><br>
-  <div><%= form.label :images %>
-  <%= form.file_field :images, multiple: true %></div><br>
   <div class="field">
     <%= form.label :category_ids, "Categories" %>
     <%= form.select :category_ids,

@@ -25,7 +25,6 @@ class UsersController < ApplicationController
   end
 
   def seller_history
-    # @user_purchase_history = @user.products.find_by(sold: true)
     @user = current_user
   end
 end
