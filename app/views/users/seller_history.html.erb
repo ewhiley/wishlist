@@ -7,7 +7,7 @@
     <div class="field"><%= product.price %></div>
     <% if product.images.any? %>
       <%= product.images.each do |img| %>
-        <%= image_tag image %>
+        <%= image_tag img %>
       <% end %>
     <% end %>
   <% end %>
