@@ -23,7 +23,6 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   def update
