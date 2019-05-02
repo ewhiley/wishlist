@@ -18,6 +18,8 @@ gem 'cancancan'
 gem 'stripe'
 gem 'money-rails', '~>1.12'
 gem 'aws-sdk', '~> 3'
+gem 'jquery-rails'
+gem 'chosen-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
