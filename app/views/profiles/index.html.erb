@@ -1,17 +1,23 @@
 <h1>My Profile</h1>
 
 <% if @user.profile == nil %>
-  <%= form_with model: @product, local: true  do |form| %>
+  <%= form_with model: @profile, local: true  do |form| %>
     <p><%= form.label :name %>
-    <%= form.text_field :name %></p><br><br>
-    <p><%= form.label :description %>
-    <%= form.text_area :description %></p><br><br>
-    <p><%= form.label :price %> $
-    <%= form.file_field :images, multiple: true %><br>
-    <%# <% Category.all.each do |category| %>
-      <%#= category.name%>
-    <%# end %>
-    <%= form.label :category %>
+    <%= form.text_field :name %></p>
+    <p><%= form.label :phone_no %>:
+    <%= form.telephone_field :phone_no %></p>
+    <p><%= form.label :street_no %> $
+    <%= form.text_field :street_no %>
+    <p><%= form.label :street_address %>
+    <%= form.text_field :street_address %></p>
+    <p><%= form.label :suburb %>
+    <%= form.text_field :suburb %></p>
+    <p><%= form.label :street_address %>
+    <%= form.text_field :street_address %></p>
+    <%= form.label :state %>
+    <%= form.select :state, "<option>New South Wales</option>Victoria<option>Queensland</option><option>Western Australia</option><option>South Australia</option><option>Tasmania</option><option>Australian Capital Territory</option><option>Northern Territory</option>".html_safe  %>
+    <p><%= form.label :postcode %>
+    <%= form.text_field :postcode %></p>
     <%#= form.text_field :category_ids, multiple: true %>
     <%= form.submit %>
   <% end %>
