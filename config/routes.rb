@@ -8,9 +8,11 @@ Rails.application.routes.draw do
     resources :purchases
   end
 
+  resources :profiles
   # get '/users/:id/products', to: 'users#products', as: 'user_products'
   get '/users/:id/wishlists', to: 'users#wishlists', as: 'user_wishlists'
 
   get '/products', to: 'products#index', as: 'my_products'
   get '/wishlists', to: 'wishlists#index', as: 'my_wishlists'
+  get '/profiles', to: 'profiles#index', as: 'my_profile'
 end

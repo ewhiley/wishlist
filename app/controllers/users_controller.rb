@@ -15,4 +15,8 @@ class UsersController < ApplicationController
   def wishlists
     @user_wishlists = @user.wishlists
   end
+
+  def profile
+    @user_profile = @user.profile
+  end
 end

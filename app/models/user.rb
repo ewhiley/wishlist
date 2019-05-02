@@ -6,4 +6,5 @@ class User < ApplicationRecord
          :confirmable
   has_many :products
   has_many :wishlists
+  has_one :profile
 end
