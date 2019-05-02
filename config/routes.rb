@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   resources :wishlists do
     resources :purchases
   end
-
+  
+  resources :profiles
   # get '/users/:id/products', to: 'users#products', as: 'user_products'
   get '/users/:id/wishlists', to: 'users#wishlists', as: 'user_wishlists'
 
