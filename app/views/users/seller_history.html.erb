@@ -1,0 +1,14 @@
+<h1>Sold Products</h1>
+
+<% @user.products.each do |product| %>
+  <%if product.sold == true %>
+    <div class="field"><%= product.name %></div>
+    <div class="field"><%= product.description %></div>
+    <div class="field"><%= product.price %></div>
+    <% if product.images.any? %>
+      <%= product.images.each do |img| %>
+        <%= image_tag image %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

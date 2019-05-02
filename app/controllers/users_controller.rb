@@ -19,4 +19,13 @@ class UsersController < ApplicationController
   def profile
     @user_profile = @user.profile
   end
+
+  def wishlist_history
+    @user = current_user
+  end
+
+  def seller_history
+    # @user_purchase_history = @user.products.find_by(sold: true)
+    @user = current_user
+  end
 end
