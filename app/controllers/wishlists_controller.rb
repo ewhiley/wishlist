@@ -10,20 +10,9 @@ class WishlistsController < ApplicationController
   end
 
   def create
-    @categories = Category.all.map{|c| [ c.name, c.id ] }
     @wishlist = Wishlist.new(wishlist_params)
     @wishlist.user = current_user
 
-    category = Category.find(params[:category_id1])
-    category2 = Category.find(params[:category_id2])
-    category3 = Category.find(params[:category_id3])
-    category4 = Category.find(params[:category_id4])
-    category5 = Category.find(params[:category_id5])
-    @wishlist.categories << category
-    @wishlist.categories << category2
-    @wishlist.categories << category3
-    @wishlist.categories << category4
-    @wishlist.categories << category5
     @wishlist.save
 
     redirect_to wishlist_path(@wishlist)
