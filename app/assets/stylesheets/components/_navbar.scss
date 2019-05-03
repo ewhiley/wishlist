@@ -20,3 +20,19 @@
 .nav-link:hover {
   color: #08C3A3 !important;
 }
+
+.navbar {
+  height: 80px;
+}
+
+.btn-success {
+  border-color: #08C3A3;
+  background-color: #08C3A3;
+  color: white !important;
+}
+
+.btn-success:hover {
+  border-color: #d71845;
+  background-color: #d71845;
+  color: white !important;
+}

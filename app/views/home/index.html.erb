@@ -1,27 +1,44 @@
 <h1 class="home">Home#index</h1>
 <% if user_signed_in? == false %>
-  <% @products.each do |product| %>
-    <% if product.sold == false %>
-      <div>
-        <p><%= product.name %></p>
-        <p><%= product.description %></p>
-        <p><%= '%.2f' % product.price %></p>
-        <%= link_to "Checkout Now", new_user_registration_path %>
-      </div>
-    <% end %>
-  <%end %>
+  <div class="row cards">
+    <% @products.each do |product| %>
+      <% if product.sold == false %>
+        <div class="col-sm-3">
+          <div class="card card2">
+            <% product.images.each do |image| %>
+              <%= image_tag image, class: "card-img-top thumbnail" %>
+            <% end %>
+            <div class="card-body">
+              <h4 class="card-title"><%= product.name %></h4>
+              <p class="card-text">$<%= '%.2f' % product.price %></p>
+              <%= link_to "Checkout Now", new_user_registration_path, class: "btn btn-success" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <%end %>
+  </div>
 <% elsif user_signed_in? == true %>
-   <% @products.each do |product| %>
-    <% if product.sold == false && product.user_id != current_user.id%>
-      <div>
-        <p><%= product.name %></p>
-        <p><%= product.description %></p>
-        <p><%= '%.2f' % product.price %></p>
-        <%= link_to "Checkout Now", purchase_no_wishlist_path(product) %>
-      </div>
-    <% end %>
-  <% end %>
+  <div class="row cards">
+    <% @products.each do |product| %>
+      <% if product.sold == false && product.user_id != current_user.id%>
+        <div class="col-sm-3">
+          <div class="card card2">
+            <% product.images.each do |image| %>
+              <%= image_tag image, class: "card-img-top thumbnail" %>
+            <% end %>
+            <div class="card-body">
+              <h4 class="card-title"><%= product.name %></h4>
+              <p class="card-text">$<%= '%.2f' % product.price %></p>
+              <%= link_to "Checkout Now", purchase_no_wishlist_path(product), class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <%end %>
+  </div>
 <% end %>
+
 
 
 
