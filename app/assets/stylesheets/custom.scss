@@ -1,2 +1,17 @@
 @import "bootstrap";
 
+* {
+  font-family: 'Open Sans', sans-serif;
+ }
+
+ .btn-outline-success {
+  color: #08C3A3 !important;
+  border-color: #08C3A3;
+  margin: 10px;
+}
+
+.btn-outline-success:hover {
+  color: white !important;
+  border-color: #08C3A3;
+  background-color: #08C3A3;
+}
