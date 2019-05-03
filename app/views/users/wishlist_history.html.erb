@@ -7,3 +7,12 @@
     <div class="field"><%= wishlist.price %></div>
   <% end %>
 <% end %>
+
+<h1>Purchases without wishlists</h1>
+<% @purchases.each do |purchase| %>
+  <% if purchase.buyer_id == @user.id && purchase.wishlist_id == nil%>
+    <p><%= Product.find(purchase.buyer_id).name %></p>
+    <p><%= Product.find(purchase.buyer_id).description %></p>
+    <p><%= Product.find(purchase.buyer_id).price %></p>
+  <% end %>
+<% end %>

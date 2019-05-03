@@ -28,13 +28,6 @@ class PurchasesController < ApplicationController
 
     @product.toggle!(:sold)
     @wishlist.toggle!(:completed)
-
-
-
-    
-    
-    # (buyer_id: @user.id, seller_id: @product.user.id, product_id: @product.id, price: @product.price, wishlist_id: @wishlist.id)
-
    
     
     flash[:notice] = "Thank you for your purchase! We hope you enjoy #{@product.name}"
@@ -51,6 +44,34 @@ class PurchasesController < ApplicationController
   end
 
   def no_wishlist_create
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:format])
+    @user = current_user
+
+    @amount = ((@product.price) * 100).to_i
+
+    customer = Stripe::Customer.create({
+      email: params[:stripeEmail],
+      source: 'tok_visa',
+    })
+  
+    charge = Stripe::Charge.create({
+      customer: customer.id,
+      amount: @amount,
+      description: 'Rails Stripe customer',
+      currency: 'aud',
+    })
+  
+    @purchase = Purchase.new(buyer_id: @user.id, seller_id: @product.user.id, product_id: @product.id, price: @product.price, wishlist_id: nil)
+    
+    @purchase.save
+
+    @product.toggle!(:sold)
+   
+    flash[:notice] = "Thank you for your purchase! We hope you enjoy #{@product.name}"
+
+    redirect_to my_wishlists_path
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to purchase_path(@product)
   end
 end

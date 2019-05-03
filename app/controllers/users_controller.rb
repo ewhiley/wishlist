@@ -22,6 +22,7 @@ class UsersController < ApplicationController
 
   def wishlist_history
     @user = current_user
+    @purchases = Purchase.all
   end
 
   def seller_history

@@ -2,6 +2,7 @@ class WishlistsController < ApplicationController
   def index
     @wishlists = Wishlist.all
     @user = current_user
+    @products_without_wishlists = Purchase.all.find_by(buyer_id: @user.id)
   end
 
   def new
