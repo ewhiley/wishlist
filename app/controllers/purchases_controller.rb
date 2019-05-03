@@ -45,9 +45,12 @@ class PurchasesController < ApplicationController
     redirect_to purchase_path(@product)
   end
 
-  # private
-  # def purchase_params
-  #   params.
-  # end
+  def no_wishlist
+    id = params[:format]
+    @product = Product.find(id)
+  end
 
+  def no_wishlist_create
+    @product = Product.find(params[:id])
+  end
 end

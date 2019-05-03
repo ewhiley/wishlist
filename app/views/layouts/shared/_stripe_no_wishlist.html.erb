@@ -1,0 +1,20 @@
+<%= form_tag purchase_no_wishlist_create_path(@product) do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount">
+      <span>$<%= '%.2f' % @product.price %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="Purchase <%= @product.name %>"
+          data-amount="<%= @product.price * 100 %>"
+          data-locale="auto"
+          data-currency=aud
+          data-label="Buy Now"></script> 
+<% end %>
