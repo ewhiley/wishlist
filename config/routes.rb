@@ -14,8 +14,8 @@ Rails.application.routes.draw do
 
   get '/products', to: 'products#index', as: 'my_products'
   get '/wishlists', to: 'wishlists#index', as: 'my_wishlists'
-  get '/profiles', to: 'profiles#index', as: 'my_profile'
-  get '/sold', to: 'users#seller_history', as: 'my_sales'
+  get '/profiles/', to: 'profiles#show', as: 'my_profile'
+  get '/sold/', to: 'users#seller_history', as: 'my_sales'
   get '/ticked-off', to: 'users#wishlist_history', as: 'my_wishlist_history'
   get '/purchase-no-wishlist/:id', to: 'purchases#no_wishlist', as: 'purchase_no_wishlist'
   post '/purchase-no-wishlist/', to: 'purchases#no_wishlist_create', as: 'purchase_no_wishlist_create'

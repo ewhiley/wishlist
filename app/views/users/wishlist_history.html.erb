@@ -4,6 +4,25 @@
   <% if wishlist.completed == true %>
     <div class="field"><%= wishlist.name %></div>
     <div class="field"><%= wishlist.description %></div>
-    <div class="field"><%= wishlist.price %></div>
+    <div class="field"><%= wishlist.price %></div><br><br>
+    <% pur = Purchase.find_by(wishlist_id: wishlist.id) %>
+    <% pro = Product.find_by(id: pur.product_id) %>
+    <div class="field"></p><%= pro.name %></div>
+    <div class="field"><%= pro.description %></div>
+    <div class="field"><%= pro.price %></div>
+    <% user = User.find(pro.user_id)  %>
+    <div class="field"><%= user.name %></div>
+    <div class="field"><%= user %></div>
+    <div class="field"><%= user.name %></div>
+    
+  <% end %>
+<% end %>
+
+<h1>Purchases without wishlists</h1>
+<% @purchases.each do |purchase| %>
+  <% if purchase.buyer_id == @user.id && purchase.wishlist_id == nil%>
+    <p><%= Product.find(purchase.buyer_id).name %></p>
+    <p><%= Product.find(purchase.buyer_id).description %></p>
+    <p><%= Product.find(purchase.buyer_id).price %></p>
   <% end %>
 <% end %>
