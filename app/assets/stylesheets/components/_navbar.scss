@@ -1,10 +1,4 @@
-@import "bootstrap";
-
-* {
-  font-family: 'Open Sans', sans-serif;
- }
-
- .btn-outline-success {
+.btn-outline-success {
   color: #08C3A3 !important;
   border-color: #08C3A3;
   margin: 10px;
@@ -14,4 +8,15 @@
   color: white !important;
   border-color: #08C3A3;
   background-color: #08C3A3;
+}
+
+.nav-link {
+  // color: 222222;
+  color: red;
+  font-size: 1.2em !important;
+  margin: 30px;
+}
+
+.nav-link:hover {
+  color: #08C3A3 !important;
 }

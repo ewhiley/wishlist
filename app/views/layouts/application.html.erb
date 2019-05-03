@@ -4,12 +4,14 @@
     <title>RailsMarketplace</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', "https://fonts.googleapis.com/css?family=Open+Sans", media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application'%>
   </head>
 
   <body>
     <%= render '/layouts/shared/navigation.html.erb' %>
+    <%= render "/layouts/shared/homepage_slider.html.erb" if current_page?(root_path) %>
+    <%= render "/layouts/shared/homepage_separator.html.erb" if current_page?(root_path) %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
