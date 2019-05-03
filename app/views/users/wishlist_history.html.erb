@@ -1,0 +1,9 @@
+<h1>Wishlist History</h1>
+
+<% @user.wishlists.each do |wishlist| %>
+  <% if wishlist.completed == true %>
+    <div class="field"><%= wishlist.name %></div>
+    <div class="field"><%= wishlist.description %></div>
+    <div class="field"><%= wishlist.price %></div>
+  <% end %>
+<% end %>

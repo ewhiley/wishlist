@@ -1,22 +1,19 @@
 <h1>New Wishlist</h1>
 
 <%= form_with model: @wishlist, local: true  do |form| %>
-  <p><%= form.label :name %>
-  <%= form.text_field :name %></p><br><br>
-  <p><%= form.label :description %>
-  <%= form.text_area :description %></p><br><br>
-  <p><%= form.label :price %> $
-  <%= form.number_field(:price, min: 1.00, step: 0.01)%></p><br><br>
-  <%= form.file_field :images, multiple: true %><br>
-  <% Category.all.each do |category| %>
-    <p><%= category.name%></p>
-  <% end %>
-  <%= form.label :category %>
-  <%#= form.text_field :category_ids, multiple: true %>
-  <%= select_tag(:category_id1, options_for_select(@categories)) %>
-  <%= select_tag(:category_id2, options_for_select(@categories)) %>
-  <%= select_tag(:category_id3, options_for_select(@categories)) %>
-  <%= select_tag(:category_id4, options_for_select(@categories)) %>
-  <%= select_tag(:category_id5, options_for_select(@categories)) %>
+  <div class="field"><%= form.label :name, "Wishlist Name" %>
+  <%= form.text_field :name %></div><br><br>
+  <div><%= form.label :description %>
+  <%= form.text_area :description %></div><br><br>
+  <div><%= form.label :price %> $
+  <%= form.number_field(:price, min: 1.00, step: 0.01)%></div><br><br>
+  <div class="field">
+    <%= form.label :category_ids, "Categories" %>
+    <%= form.select :category_ids,
+      Category.all.map { |k| [k.name, k.id] },
+                      { include_blank: true },
+                      { :multiple => true, class: 'chosen-select' }
+    %>
+  </div>
   <%= form.submit %>
 <% end %>

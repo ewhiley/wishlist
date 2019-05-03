@@ -20,6 +20,7 @@ gem 'money-rails', '~>1.12'
 gem 'aws-sdk', '~> 3'
 gem 'jquery-rails'
 gem 'chosen-rails'
+gem 'bootstrap', '~> 4.3.1'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

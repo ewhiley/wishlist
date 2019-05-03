@@ -19,4 +19,12 @@ class UsersController < ApplicationController
   def profile
     @user_profile = @user.profile
   end
+
+  def wishlist_history
+    @user = current_user
+  end
+
+  def seller_history
+    @user = current_user
+  end
 end
