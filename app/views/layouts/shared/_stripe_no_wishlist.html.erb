@@ -1,4 +1,4 @@
-<%= form_tag wishlist_purchases_path(@wishlist, @product) do %>
+<%= form_tag purchase_no_wishlist_create_path(@product) do %>
   <article>
     <% if flash[:error].present? %>
       <div id="error_explanation">

@@ -1,4 +1,4 @@
-<h1>Home#index</h1>
+<h1 class="home">Home#index</h1>
 
 <% if user_signed_in? == false %>
   <% @products.each do |product| %>
@@ -17,7 +17,11 @@
         <p><%= product.name %></p>
         <p><%= product.description %></p>
         <p><%= '%.2f' % product.price %></p>
+        <%= link_to "Checkout Now", purchases_no_wishlist_path(product) %>
       </div>
     <% end %>
   <% end %>
 <% end %>
+
+
+
