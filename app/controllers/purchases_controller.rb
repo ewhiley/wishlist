@@ -46,7 +46,7 @@ class PurchasesController < ApplicationController
   end
 
   def no_wishlist
-    id = params[:format]
+    id = params[:id]
     @product = Product.find(id)
   end
 
