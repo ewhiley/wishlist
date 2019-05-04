@@ -10,10 +10,9 @@
 
   <body>
     <%= render '/layouts/shared/navigation.html.erb' %>
+    <%= render '/layouts/shared/messages.html.erb' %>
     <%= render "/layouts/shared/homepage_slider.html.erb" if current_page?(root_path) %>
     <%= render "/layouts/shared/homepage_separator.html.erb" if current_page?(root_path) %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
   <%= render '/layouts/shared/bottom_nav.html.erb' %>

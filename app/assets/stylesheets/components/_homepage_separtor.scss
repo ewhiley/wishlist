@@ -1,0 +1,29 @@
+.site-section {
+  height: 315px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(232, 234, 236) !important;
+}
+
+.banner-ad {
+  margin-top: 10px;
+  height: 190px;
+  width: 100%;
+  background-image: asset_url('Adidas_Banner.gif');
+  background-size: cover;
+  background-position: center;
+  border: 20px solid white;
+}
+
+.banner-ad2 {
+  height: 140px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: asset_url('kayo.gif');
+  // background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 20px solid white;
+}

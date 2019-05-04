@@ -15,6 +15,7 @@ class WishlistsController < ApplicationController
     @wishlist.user = current_user
 
     @wishlist.save
+    flash[:success] = "Wishlist successfully created"
 
     redirect_to wishlist_path(@wishlist)
   end
@@ -41,7 +42,7 @@ class WishlistsController < ApplicationController
     @wishlist = Wishlist.find(params[:id])
    
     if @wishlist.update(wishlist_params)
-      flash[:notice] = "Wishlist successfully updated"
+      flash[:success] = "Wishlist successfully updated"
       redirect_to @wishlist
     else
       render 'edit'
@@ -51,7 +52,7 @@ class WishlistsController < ApplicationController
   def destroy
     @wishlist = Wishlist.find(params[:id])
     @wishlist.destroy
-    flash[:alert] = "Wishlist was successfully deleted"
+    flash[:danger] = "Wishlist was successfully deleted"
     
     redirect_to wishlists_path
   end

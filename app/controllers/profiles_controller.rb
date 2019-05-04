@@ -28,7 +28,7 @@ class ProfilesController < ApplicationController
     @user = current_user
 
     if @profile.update(profile_params)
-      flash[:notice] = "Profile succesfully updated"
+      flash[:success] = "Profile succesfully updated"
       redirect_to @user.profile
     else
       render 'edit'
