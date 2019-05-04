@@ -21,12 +21,19 @@ a.nav-link {
   margin: 30px; 
 }
 
-a#navbarDropdown.navlink {
+a#navbarDropdown.nav-link.dropdown-toggle {
   color: #222222;
 }
 
+a#navbarDropdown.nav-link.dropdown-toggle:active {
+  color: #08C3A3; 
+}
 
 .nav-link:hover {
+  color: #08C3A3 !important;
+}
+
+.nav-link:active {
   color: #08C3A3 !important;
 }
 
