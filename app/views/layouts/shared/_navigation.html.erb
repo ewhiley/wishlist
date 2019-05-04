@@ -7,15 +7,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <%= link_to 'Sell', new_user_registration_path, class: "nav-link" %>
+          <%= link_to 'SELL', new_user_registration_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
-          <%= link_to 'My Wishlists', new_user_registration_path, class: "nav-link" %>
+          <%= link_to 'WISHLISTS', new_user_registration_path, class: "nav-link" %>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <%= link_to 'Log In', new_user_session_path, class: "btn btn-outline-success my-2 my-sm-0" %>
-        <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-outline-success my-2 my-sm-0" %>
+        <%= link_to 'LOG IN', new_user_session_path, class: "btn btn-outline-success my-2 my-sm-0" %>
+        <%= link_to 'SIGN UP', new_user_registration_path, class: "btn btn-outline-success my-2 my-sm-0" %>
       </form>
     </div>
   <% else %>
@@ -23,7 +23,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sell
+            SELL
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to 'My Products', my_products_path, class: "dropdown-item" %>
@@ -33,7 +33,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Wishlists
+            WISHLISTS
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to 'My Wishlists', my_wishlists_path, class: "dropdown-item" %>
@@ -43,7 +43,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Profile
+            PROFILE
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to 'My Profile', my_profile_path, class: "dropdown-item" %>
@@ -53,7 +53,7 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-outline-success my-2 my-sm-0" %>
+        <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: "btn btn-outline-success my-2 my-sm-0" %>
       </form>
     </div>
   <% end %>

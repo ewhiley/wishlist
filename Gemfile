@@ -21,6 +21,7 @@ gem 'aws-sdk', '~> 3'
 gem 'jquery-rails'
 gem 'chosen-rails'
 gem 'bootstrap', '~> 4.3.1'
+gem 'font-awesome-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

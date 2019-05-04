@@ -10,11 +10,21 @@
   background-color: #08C3A3;
 }
 
-.nav-link {
-  color: 222222;
+.navbar {
+  font-family: 'Roboto', sans-serif;
   font-size: 1.2em !important;
-  margin: 30px;
+  background-color: rgb(232, 234, 236) !important;
 }
+
+a.nav-link {
+  color: #222222;
+  margin: 30px; 
+}
+
+a#navbarDropdown.navlink {
+  color: #222222;
+}
+
 
 .nav-link:hover {
   color: #08C3A3 !important;
