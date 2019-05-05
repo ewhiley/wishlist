@@ -11,9 +11,19 @@ https://github.com/ewhiley/wishlist
 
 ## Description of project
 
-**NEED TO COMPLETE THIS SECTION**
+This section provides an outline of project, including the purpose, functionality and featutes.
 
 ### Problem definition / purpose
+
+The purpose of this project was to build a two-sided marketplace in Ruby on Rails. 
+
+We chose to create an eBay style app that solves some of the issues we identified with eBay. Below are some of the issues and the ways we sought to solve them with our app. 
+
+Issues with eBay| Proposed solution with our app |
+---------|----------|
+ Buyers and sellers find it hard to find each other in a sea of products and users | We implemented a matching system that allows buyers to list what they want and be matched with available products as they come on sale. | 
+ Ugly, difficult to use interface | We  tried to make our interface as simple and easy to use as possible| 
+Buying and selling isn't always fast or seamless and can be quite annoying, especially for sellers | We simplified the buying process with a quick pay-by-card solution - no bidding or negotiating. |
 
 ### Functionality / features
 
@@ -24,6 +34,7 @@ https://github.com/ewhiley/wishlist
 ### Instructions on how to setup, configure and use your App.
 
 ## Details of planning process
+The details of our planning process are outlined in this section.
 
 ### Project plan & timeline
 
@@ -50,8 +61,6 @@ Friday | README, presentaion |
 ### Design process
 Our design process is documented in our figma 
 https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
-
-
 
 The figma board:
 * defines our user personas and user stories
