@@ -3,7 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(232, 234, 236) !important;
+  // background-color: rgb(232, 234, 236) !important;
+  background-color: white;
 }
 
 .banner-ad {
@@ -26,4 +27,43 @@
   background-position: center;
   background-repeat: no-repeat;
   border: 20px solid white;
+}
+
+.tags {
+  // background-color: white;
+  // color: black;
+  background-color: #08C3A3;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.separator {
+  height: 100%;
+}
+
+.separator-text {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.icon {
+  margin: 0px !important;
+}
+
+.text-uppercase {
+  text-align: center;
+}
+
+.duo {
+  text-align: center;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #08C3A3;
 }

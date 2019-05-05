@@ -23,5 +23,10 @@
  @import 'components/carousel';
  @import 'components/navbar';
  @import 'components/homepage_icons';
- @import 'components/bottom_nav'
+ @import 'components/bottom_nav';
+
+ * {
+   margin: 0px;
+   overflow-x: hidden;
+ }
  
