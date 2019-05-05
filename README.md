@@ -170,8 +170,8 @@ The app includes the following features:
 
 ### 4. Describe the network infrastructure the App may be based on.
 The network infrastructure for this app includes the following services: 
-- Deployed on Heroku
-- AWS S3 for storing image uploads
+- We have deployed our app on Heroku, a cloud-based platform that allows you to deploy code directly from GitHub.
+- we used AWS S3 for storing image uploads since Heroku uses an 'ephemeral filesystem' so any user uploaded images on the Heroku filesystem are wiped out with every push
 
 ### 5. Identify and describe the software to be used in your App.
 
