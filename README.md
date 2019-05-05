@@ -58,7 +58,14 @@ The app has the following tech stack.
 - HTML, ERB, SCSS, Javascript
 
 ### Instructions on how to setup, configure and use your App.
-**NEED TO INCLUDE**
+
+How to get started with the Wishlist app
+
+- Clone repo: https://github.com/ewhiley/wishlist
+- Bundle
+- Edit credentials file for Mailgun and Stripe credentials
+- rails db:migrate
+- rails s
 
 ## Details of planning process
 The details of our planning process are outlined in this section.
@@ -142,32 +149,65 @@ Issues with eBay| Reasons why the issue needs to be solved |Proposed solution wi
  Ugly, difficult to use interface | It's important the interface is easy to use because otherwise, the matching system implemented above will be useless if users can't find it or can't use it | We tried to make our interface as simple and easy to use as possible| 
 Buying and selling isn't always fast or seamless and can be quite annoying, especially for sellers | If sellers find the selling process annoying, they will choose to sell through other platforms. Without sellers there would be no products on the website | We simplified the buying process with a quick pay-by-card solution - no bidding or negotiating. |
 
-### Describe the project will you be conducting and how your App will address the needs.
+### 3. Describe the project will you be conducting and how your App will address the needs.
 
-### Describe the network infrastructure the App may be based on.
+In order to meet the need to address the issues above, the app will include the following. 
 
-### Identify and describe the software to be used in your App.
+Ability to: 
+- browse and purchase products
+- sign in, set up a profile, edit profile
+- list and edit products to sell, including image upload
+- list a wishlist
+- view their wishlist matches and purchase
+- view their sales an purchase history
 
-### Identify the database to be used in your App and provide a justification for your choice.
+The app includes the following features:
+- Secure payment with Stripe
+- Authentication and authorisation with Devise and CanCan
+- Email automation with Mailgun
+- Image upload
+- Category data sanitisation through search and filter feature
 
-### Identify and describe the production database setup (i.e. postgres instance).
+### 4. Describe the network infrastructure the App may be based on.
+The network infrastructure for this app includes the following services: 
+- Deployed on Heroku
+- AWS S3 for storing image uploads
 
-### Describe the architecture of your App.
+### 5. Identify and describe the software to be used in your App.
 
-### Explain the different high-level components (abstractions) in your App.
+### 6. Identify the database to be used in your App and provide a justification for your choice.
 
-### Detail any third party services that your App will use.
+### 7. Identify and describe the production database setup (i.e. postgres instance).
 
-### Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
-### Discuss the database relations to be implemented.
-### Describe your project’s models in terms of the relationships (active record associations) they have with each other.
-### Provide your database schema design.
-### Provide User stories for your App.
-### Provide Wireframes for your App.
-### Describe the way tasks are allocated and tracked in your project.
-### Discuss how Agile methodology is being implemented in your project.
-### Provide an overview and description of your Source control process.
-### Provide an overview and description of your Testing process.
-### Discuss and analyse requirements related to information system security.
-### Discuss methods you will use to protect information and data.
-### Research what your legal obligations are in relation to handling user data.
+### 8. Describe the architecture of your App.
+
+### 9. Explain the different high-level components (abstractions) in your App.
+
+### 10. Detail any third party services that your App will use.
+
+### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
+
+### 12. Discuss the database relations to be implemented.
+
+### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
+
+### 14. Provide your database schema design.
+
+
+### 15. Provide User stories for your App.
+
+### 16. Provide Wireframes for your App.
+
+### 17. Describe the way tasks are allocated and tracked in your project.
+
+### 18. Discuss how Agile methodology is being implemented in your project.
+
+### 19. Provide an overview and description of your Source control process.
+
+### 20. Provide an overview and description of your Testing process.
+
+### 21. Discuss and analyse requirements related to information system security.
+
+### 22. Discuss methods you will use to protect information and data.
+
+### 23. Research what your legal obligations are in relation to handling user data.
