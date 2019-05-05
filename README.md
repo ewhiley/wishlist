@@ -124,7 +124,7 @@ See: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
 
 ## Short Answer Q&A - Include short answers to the following questions
 
-1. What is the need (i.e. challenge) that you will be addressing in your project?
+### 1. What is the need (i.e. challenge) that you will be addressing in your project?
 
 The purpose of this project was to build a two-sided marketplace in Ruby on Rails. We chose to create an eBay-style app called Wishlist. We identified a number of issues with the current eBay site and set the challenge to solve some of these issues with our app. 
 
@@ -132,12 +132,12 @@ The first challenge was to create an app that included many of the same features
 
 The second challenge was to create some features and functionality that provides a solution to soe issues we identified with eBay, including difficulty matching buyers with sellers, difficult/ugly user interface, difficult/annoying selling process. 
 
-2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
+### 2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
 
 Our app provides a solution to some of the issues we identified with eBay. Below are some of the issues, the reasoning behind why they need to be solved, and the ways we attempted to solve them with our app. 
 
 Issues with eBay| Reasons why the issue needs to be solved |Proposed solution with our app |
----------|----------|
+---------|----------|----------|
  Buyers and sellers find it hard to find each other in a sea of products and users | It's important buyers and sellers can find each other quickly and easily or they will choose to buy and sell on other platforms | We implemented a matching system that allows buyers to list what they want and be matched with available products as they come on sale. | 
  Ugly, difficult to use interface | It's important the interface is easy to use because otherwise, the matching system implemented above will be useless if users can't find it or can't use it | We tried to make our interface as simple and easy to use as possible| 
 Buying and selling isn't always fast or seamless and can be quite annoying, especially for sellers | If sellers find the selling process annoying, they will choose to sell through other platforms. Without sellers there would be no products on the website | We simplified the buying process with a quick pay-by-card solution - no bidding or negotiating. |
