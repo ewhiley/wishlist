@@ -44,19 +44,21 @@ The app includes the following features:
 - Category data sanitisation through search and filter feature
 
 ### Screenshots
+**NEED TO INCLUDE**
 
 ### Tech stack (e.g. html, css, deployment platform, etc)
 The app has the following tech stack.
 
 #### Server side
-**Language and framework:** Ruby on Rails
-**Database:** PostgreSQL
-**Deployment platform:** Heroku, with AWS S3 for storing image uploads
+- **Language and framework:** Ruby on Rails
+- **Database:** PostgreSQL
+- **Deployment platform:** Heroku, with AWS S3 for storing image uploads
 
 #### Client side
-HTML, ERB, SCSS, Javascript
+- HTML, ERB, SCSS, Javascript
 
 ### Instructions on how to setup, configure and use your App.
+**NEED TO INCLUDE**
 
 ## Details of planning process
 The details of our planning process are outlined in this section.
@@ -71,14 +73,19 @@ Tuesday| Heroku, Mailer |
 Wednesday | Wireframes, User flows, Purchases, Stripe |
 Thursday | Views, Styling |
 Friday | Finalising MVP |
+Weekend |Finalising MVP|
 **Week 2** | |
-Monday | Additional functionality |
-Tuesday | Additional functionality  |
-Wednesday | Additional functionality |
-Thursday | README |
-Friday | README, presentaion |
+Monday | Additional functionality, styling, testing |
+Tuesday | Additional functionality, styling, testing |
+Wednesday | Additional functionality, styling, testing  |
+Thursday | Finalise README |
+Friday | Finalise README, presentaion |
 
 ### Screenshots of Trello board(s)
+We kept track of our tasks using trello (screenshot below)
+
+Every morning, we had a team standup and updated the Trello board to reflet what we had done and what we were working on. We then reported our progress to the class standup. 
+
 <img width="1254" alt="Trello board" src="https://user-images.githubusercontent.com/31295147/57002511-49c72380-6c03-11e9-85bc-113ff6804202.png">
 
 ## Design documentation
@@ -86,22 +93,29 @@ Our design process is documented in our figma board
 https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
 
 ### Design process
+As the Figma board shows, we:
+- identified our users and their needs
+- created our user stories and journeys
+- identified what our MVP would be 
+- created our ERD 
+- researched user interfaces for inspiration
+- identified the various page types that needed to be wireframed
+- created low fidelity wireframes
+- created a moodboard based on our user stories and research
+- created a range of colour palettes based on our moodboard
+- discussed and decided on a colour palette based on what would work best for our users, accessibility and design
+- created a range of logos and decided on one as a team
+- created high-fidelity wireframes using the chosen colour-palette and logo  
 
-The figma board:
-* defines our user personas and user stories
-* outlines our user journeys
-* explores the user interfaces we like
+### Wireframes and moodboard and colour scheme (screenshots)
+For high-res, see: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
 
+### User stories and workflow diagram of the user journey/s (screenshots)
+For high-res, see: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
 
-From there we created our moodboard, colour scheme and wireframes.  
+### Database Entity Relationship Diagrams (screenshots)
+For high-res, see: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
 
-### Wireframes and moodboard and colour scheme
-
-
-### User stories and workflow diagram of the user journey/s.
-<img width="695" alt="User stories and user journeys" src="https://user-images.githubusercontent.com/31295147/57003366-87c74600-6c09-11e9-886f-77f5d61404f9.png">
-
-### Database Entity Relationship Diagrams
 ![Entity relationship diagram](https://user-images.githubusercontent.com/31295147/57003582-2b652600-6c0b-11e9-9533-559735c9e9bc.png)
 
 ## Short Answer Q&A - Include short answers to the following questions
