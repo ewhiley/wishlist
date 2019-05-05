@@ -1,7 +1,7 @@
 # README
 
 # Rails marketplace app
-Repository for the Rails project. 
+Repository for Ivan and Elizabeth's Rails project: Wishlist
 
 ## Deployed app
 https://agile-hamlet-55236.herokuapp.com
@@ -117,8 +117,6 @@ See Figma board: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?n
 
 Or pdf: [Figma_board_Optimize.pdf](https://github.com/ewhiley/wishlist/files/3145064/Figma_board_Optimize.pdf)
 
-Or pdf: 
-
 ### Database Entity Relationship Diagrams (screenshots)
 See: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
 
@@ -126,13 +124,25 @@ See: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
 
 ## Short Answer Q&A - Include short answers to the following questions
 
-### What is the need (i.e. challenge) that you will be addressing in your project?
+1. What is the need (i.e. challenge) that you will be addressing in your project?
 
-### Identify the problem you’re trying to solve by building this particular marketplace App? 
+The purpose of this project was to build a two-sided marketplace in Ruby on Rails. We chose to create an eBay-style app called Wishlist. We identified a number of issues with the current eBay site and set the challenge to solve some of these issues with our app. 
 
-### Why is it a problem that needs solving?
+The first challenge was to create an app that included many of the same features as eBay, including two different user types, authentication and authorisation of these two user types, ability to list and edit product details, image uploads, a payment system and an automated email system. 
 
-### Describe the project will you be conducting and how. your App will address the needs.
+The second challenge was to create some features and functionality that provides a solution to soe issues we identified with eBay, including difficulty matching buyers with sellers, difficult/ugly user interface, difficult/annoying selling process. 
+
+2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
+
+Our app provides a solution to some of the issues we identified with eBay. Below are some of the issues, the reasoning behind why they need to be solved, and the ways we attempted to solve them with our app. 
+
+Issues with eBay| Reasons why the issue needs to be solved |Proposed solution with our app |
+---------|----------|
+ Buyers and sellers find it hard to find each other in a sea of products and users | It's important buyers and sellers can find each other quickly and easily or they will choose to buy and sell on other platforms | We implemented a matching system that allows buyers to list what they want and be matched with available products as they come on sale. | 
+ Ugly, difficult to use interface | It's important the interface is easy to use because otherwise, the matching system implemented above will be useless if users can't find it or can't use it | We tried to make our interface as simple and easy to use as possible| 
+Buying and selling isn't always fast or seamless and can be quite annoying, especially for sellers | If sellers find the selling process annoying, they will choose to sell through other platforms. Without sellers there would be no products on the website | We simplified the buying process with a quick pay-by-card solution - no bidding or negotiating. |
+
+### Describe the project will you be conducting and how your App will address the needs.
 
 ### Describe the network infrastructure the App may be based on.
 
