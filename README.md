@@ -100,21 +100,27 @@ As the Figma board shows, we:
 - created our ERD 
 - researched user interfaces for inspiration
 - identified the various page types that needed to be wireframed
-- created low fidelity wireframes
+- created low fidelity wireframes for all page types (in different device sizes)
 - created a moodboard based on our user stories and research
-- created a range of colour palettes based on our moodboard
+- created a range of colour palettes and font pairing based on our moodboard
 - discussed and decided on a colour palette based on what would work best for our users, accessibility and design
 - created a range of logos and decided on one as a team
 - created high-fidelity wireframes using the chosen colour-palette and logo  
 
-### Wireframes and moodboard and colour scheme (screenshots)
-For high-res, see: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
+### Wireframes, moodboard and colour scheme (screenshots)
+See Figma board: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
+
+Or pdf: [Figma_board_Optimize.pdf](https://github.com/ewhiley/wishlist/files/3145064/Figma_board_Optimize.pdf)
 
 ### User stories and workflow diagram of the user journey/s (screenshots)
-For high-res, see: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
+See Figma board: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
+
+Or pdf: [Figma_board_Optimize.pdf](https://github.com/ewhiley/wishlist/files/3145064/Figma_board_Optimize.pdf)
+
+Or pdf: 
 
 ### Database Entity Relationship Diagrams (screenshots)
-For high-res, see: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
+See: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
 
 ![Entity relationship diagram](https://user-images.githubusercontent.com/31295147/57003582-2b652600-6c0b-11e9-9533-559735c9e9bc.png)
 
