@@ -32,23 +32,28 @@
   // max-height: calc(100vh - 80px) !important;
 }
 
-a.btn.btn-lg.btn-primary {
-  background-color: white;
-  border-color: white;
-  color: #222222;
+.header-font {
+  font-family: 'Sofia', cursive;
+  font-size: 80px;
 }
 
-a.btn.btn-lg.btn-primary:active {
-  background-color: #222222;
-  border-color: white;
-  color: white;
-}
+// a.btn.btn-lg.btn-primary {
+//   background-color: white;
+//   border-color: white;
+//   color: #222222;
+// }
 
-a.btn.btn-lg.btn-primary:hover {
-  background-color: #222222;
-  border-color: white;
-  color: white;
-}
+// a.btn.btn-lg.btn-primary:active {
+//   background-color: #222222;
+//   border-color: white;
+//   color: white;
+// }
+
+// a.btn.btn-lg.btn-primary:hover {
+//   background-color: #222222;
+//   border-color: white;
+//   color: white;
+// }
 
 
 
