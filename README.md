@@ -193,7 +193,6 @@ The network infrastructure for this app includes the following services:
 
 ### 14. Provide your database schema design.
 
-
 ### 15. Provide User stories for your App.
 
 ### 16. Provide Wireframes for your App.
