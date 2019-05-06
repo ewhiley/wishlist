@@ -15,12 +15,28 @@
   font-size: 1.2em !important;
   // background-color: rgb(232, 234, 236) !important;
   background-color: white !important;
-  height: 50px;
+  height: 65px;
+}
+
+a.navbar-brand {
+  color: #d60547 !important;
+  font-family: 'Sofia', cursive;
+  font-size: 30px;
+}
+
+a.skinny-button {
+  width: 100px;
+  height: 40px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a.nav-link {
   color: #222222;
   margin: 30px; 
+  font-size: 15px !important;
 }
 
 a#navbarDropdown.nav-link.dropdown-toggle {
