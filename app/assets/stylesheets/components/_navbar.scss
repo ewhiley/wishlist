@@ -66,3 +66,8 @@ a#navbarDropdown.nav-link.dropdown-toggle:active {
   background-color: #d71845;
   color: white !important;
 }
+
+.dropdown-toggle::after {
+  display: none;
+}
+
