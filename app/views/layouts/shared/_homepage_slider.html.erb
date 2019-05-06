@@ -4,9 +4,15 @@
     <div>
       <h2>Where your wishes come true</h2>
     </div>
-    <div class="button">
-      <button class="btn btn-succes btn-yellow">Make a wishlist</button>
-    </div>
+    <% if user_signed_in? == false %>
+      <div>
+        <%= link_to "Make a wishlist", new_user_registration_path, class: "btn btn-succes btn-yellow button" %>
+      </div>
+    <% elsif user_signed_in? == true %>
+      <div>
+        <%= link_to "Make a wishlist", new_wishlist_path, class: "btn btn-succes btn-yellow button" %>
+      </div>
+    <% end %>
   </div>
   <%= image_tag("slide_1.jpg", class:"banner-image") %>
 </div>
