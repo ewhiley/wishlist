@@ -1,9 +1,13 @@
-<h1>My Products</h1>
+<p class="myproducts-title">My Products</p>
 
-
-<% @user.products.each do |product| %>
-  <% if product.sold == false %>
-    <%= product.name %>
-    <%= link_to "Show Product", product_path(product)%>
+<ul>
+  <% @user.products.each do |product| %>
+    <% if product.sold == false %>
+      <li class="list-group-item">
+        <%= product.created_at.strftime("%d-%m-%Y") %>
+        <%= product.name %>
+        <%= link_to "Show Product", product_path(product)%>
+      </li>
+    <% end %>
   <% end %>
-<% end %>
+</ul>
