@@ -21,7 +21,6 @@
  @import url('https://fonts.googleapis.com/css?family=Roboto:400');
  @import url('https://fonts.googleapis.com/css?family=Sofia');
  @import 'components/custom';
- @import 'components/carousel';
  @import 'components/navbar';
  @import 'components/homepage_icons';
  @import 'components/bottom_nav';
@@ -29,6 +28,6 @@
 
  * {
    margin: 0px;
-   overflow-x: hidden;
+  //  overflow-x: hidden;
  }
  
