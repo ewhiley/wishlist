@@ -30,7 +30,7 @@ class PurchasesController < ApplicationController
     @wishlist.toggle!(:completed)
    
     
-    flash[:success = "Thank you for your purchase! We hope you enjoy #{@product.name}"
+    flash[:success] = "Thank you for your purchase! We hope you enjoy #{@product.name}"
 
     redirect_to my_wishlists_path
   rescue Stripe::CardError => e
