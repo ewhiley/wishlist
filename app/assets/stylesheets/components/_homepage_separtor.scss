@@ -7,28 +7,6 @@
   background-color: white;
 }
 
-.banner-ad {
-  margin-top: 10px;
-  height: 190px;
-  width: 100%;
-  background-image: asset_url('Adidas_Banner.gif');
-  background-size: cover;
-  background-position: center;
-  border: 20px solid white;
-}
-
-.banner-ad2 {
-  height: 140px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-image: asset_url('kayo.gif');
-  // background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 20px solid white;
-}
-
 .tags {
   background-color: white;
   color: black;
@@ -47,23 +25,40 @@
 .separator-text {
   text-align: center;
   margin-bottom: 0px;
+  font-size: 13px;
+  margin-top: 20px;
 }
 
 .icon {
   margin: 0px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 74px !important;
 }
 
+.font-awesome-icon {
+  margin-bottom: 0px;
+}
 .text-uppercase {
   text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.heart {
+  margin-top: 10px;
 }
 
 .duo {
   text-align: center;
   border-radius: 50%;
-  width: 160px;
-  height: 160px;
+  width: 90px;
+  height: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: #08C3A3;
 }

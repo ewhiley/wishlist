@@ -1,4 +1,6 @@
-<div class="banner-ad">
+<div class="banner">
+  <div class="banner-ad">
+  </div>
 </div>
 <h1 class="home text-center">All Products</h1>
 <% if user_signed_in? == false %>
@@ -13,7 +15,7 @@
             <div class="card-body">
               <h4 class="card-title"><%= product.name %></h4>
               <p class="card-text">$<%= '%.2f' % product.price %></p>
-              <%= link_to "Checkout Now", new_user_registration_path, class: "btn btn-success" %>
+              <%= link_to "Checkout Now", new_user_registration_path, class: "btn btn-succes btn-yellow" %>
             </div>
           </div>
         </div>
