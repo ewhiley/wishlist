@@ -1,0 +1,35 @@
+.the-core-of-earth {
+  height: 75px;
+  background-color: #d60547;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.divider {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-wishlist {
+  color: white;
+  font-family: 'Sofia', cursive;
+  margin-left: 10px;
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+.footer-icon {
+  color: white;
+  margin: 0px 8px;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 20px;
+}
