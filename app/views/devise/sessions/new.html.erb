@@ -1,26 +1,43 @@
-<h2>Log in</h2>
+<div class="container signup-container">
+  <p class="signup-title">Log in</p>
+  <div class="signup-page">
+    <div class="signup-form login-page">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field top-field form-group">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+        <div class="field form-group">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+        <% if devise_mapping.rememberable? %>
+          <div class="field form-group">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+        <div class="actions signup-button">
+          <%= f.submit "Log in", class: "btn my-2 my-sm-0 skinny-button btn-yellow" %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="or-box">
+      <div class="or">
+        <hr class="signup-line">
+        <p>OR</p>
+        <hr class="signup-line">
+      </div>
+    </div>
+    <div class="login">
+      <%= link_to "Sign up", new_user_registration_path, class: "btn my-2 my-sm-0 btn-lg btn-yellow btn-login" %>
+    </div>
+  </div> 
+  <div class="bottom">
+    <%= render "devise/shared/links" %>
   </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+</div>  
