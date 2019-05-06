@@ -21,9 +21,22 @@
         </div>
       <% end %>
     <%end %>
+    <div class="banner-ad2">
+    </div>
+  </div>
+  <div class="product-not-found">
+    <div class="left">
+      <p class="product-not-found-title">Don't see what you need?</p>
+      <p class="product-not-found-text">Sometimes we can't find what we're looking for. That's OK!</p>
+      <p class="product-not-found-text">With <span class="mini-wishlist">Wishlist</span> we match you with products that fit your search.</p>
+      <p class="product-not-found-text">It's really easy</p>
+    </div>
+    <div class="right">
+      <%= link_to "Make a wishlist", new_user_registration_path, class: "btn btn-succes btn-yellow" %>
+    </div>
   </div>
 <% elsif user_signed_in? == true %>
-  <div class="row cards">
+  <div class="row cards index-products">
     <% @products.each do |product| %>
       <% if product.sold == false && product.user_id != current_user.id%>
         <div class="col-sm-3">
@@ -40,11 +53,32 @@
         </div>
       <% end %>
     <%end %>
+    <div class="banner-ad2">
+    </div>
+  </div>
+  <div class="product-not-found">
+    <div class="left">
+      <p class="product-not-found-title">Don't see what you need?</p>
+      <p class="product-not-found-text">Sometimes we can't find what we're looking for. That's OK!</p>
+      <p class="product-not-found-text">With <span class="mini-wishlist">Wishlist</span> we match you with products that fit your search.</p>
+      <p class="product-not-found-text">It's really easy</p>
+    </div>
+    <div class="right">
+      <%= link_to "Make a wishlist", new_wishlist_path, class: "btn btn-succes btn-yellow" %>
+    </div>
   </div>
 <% end %>
-
-<div class="banner-ad2">
-</div>
+<%# <div class="product-not-found">
+  <div class="left">
+    <p class="product-not-found-title">Don't see what you need?</p>
+    <p class="product-not-found-text">Sometimes we can't find what we're looking for. That's OK!</p>
+    <p class="product-not-found-text">With <span class="mini-wishlist">Wishlist</span> we match you with products that fit your search.</p>
+    <p class="product-not-found-text">It's really easy</p>
+  </div>
+  <div class="right">
+    <button class="btn btn-succes btn-yellow">Make a wishlist</button>
+  </div>
+</div> %>
 
 
 
