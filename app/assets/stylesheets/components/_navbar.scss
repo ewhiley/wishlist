@@ -35,7 +35,7 @@ a.skinny-button {
 
 a.nav-link {
   color: #222222;
-  margin: 30px; 
+  margin: 0px 30px; 
   font-size: 15px !important;
 }
 
@@ -69,5 +69,10 @@ a#navbarDropdown.nav-link.dropdown-toggle:active {
 
 .dropdown-toggle::after {
   display: none;
+}
+
+nav.navbar-fixed-top .dropdown-menu {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
