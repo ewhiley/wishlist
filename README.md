@@ -91,7 +91,7 @@ Friday | Finalise README, presentaion |
 ### Screenshots of Trello board(s)
 We kept track of our tasks using trello (screenshot below)
 
-Every morning, we had a team standup and updated the Trello board to reflet what we had done and what we were working on. We then reported our progress to the class standup. 
+Every morning, we had a team standup and updated the Trello board to reflect what we had done and what we were working on. We then reported our progress to the class standup. 
 
 <img width="1254" alt="Trello board" src="https://user-images.githubusercontent.com/31295147/57002511-49c72380-6c03-11e9-85bc-113ff6804202.png">
 
@@ -196,15 +196,14 @@ We used the following software in the app:
 
 ### 14. Provide your database schema design.
 
-
 ### 15. Provide User stories for your App.
-####Buyer
+#### Buyer
 As a buyer, I want to: 
 - browse products and only sign up or sign in when I’m ready to purchase
 - sign up easily
 - make purchases easily and view my purchases later.
 
-####Wishlister
+#### Wishlister
 As a wishlister, I want to:
 - browse products and only sign up or sign in when I’m ready to create a wishlist
 - sign up easily
@@ -212,6 +211,7 @@ As a wishlister, I want to:
 - sign in later to see new matches
 - make purchases easily and to view my purchases later.
 
+#### Seller
 As a seller, I want to:
 - be a buyer or a seller without having to have a special seller account
 - sign up easily
@@ -229,6 +229,16 @@ The wireframes can be viewed on the Figma board: https://www.figma.com/file/CRzT
 Or pdf: [Figma_board_Optimize.pdf](https://github.com/ewhiley/wishlist/files/3145064/Figma_board_Optimize.pdf) 
 
 ### 17. Describe the way tasks are allocated and tracked in your project.
+
+Each morning, we met face-to-face and discussed the tasks to be done and allocated them according to our time and abilities. We took it in turns to go to the class standup and report back. 
+
+We team-coded from time to time but, given the time constraints and the number of tasks, we needed to split a lot of the work up. 
+
+During the week, we sat next to each other and regularly checked in with each other, as we had completed tasks or if we were having trouble/had questions about tasks. On the weekends, we checked in via Slack. 
+
+We tracked tasks to be done, in progress, and completed via our Trello board: 
+
+https://user-images.githubusercontent.com/31295147/57002511-49c72380-6c03-11e9-85bc-113ff6804202.png 
 
 ### 18. Discuss how Agile methodology is being implemented in your project.
 
