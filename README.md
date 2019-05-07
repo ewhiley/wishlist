@@ -198,10 +198,31 @@ We used the following software in the app:
 
 
 ### 15. Provide User stories for your App.
+####Buyer
+As a buyer, I want to: 
+- browse products and only sign up or sign in when I’m ready to purchase
+- sign up easily
+- make purchases easily and view my purchases later.
 
+####Wishlister
+As a wishlister, I want to:
+- browse products and only sign up or sign in when I’m ready to create a wishlist
+- sign up easily
+- add products to my wishlist and see current matches
+- sign in later to see new matches
+- make purchases easily and to view my purchases later.
+
+As a seller, I want to:
+- be a buyer or a seller without having to have a special seller account
+- sign up easily
+- list my products for sale and manage my products
+- leave the transaction to the website (not worry about cash purchases)
+- view my sales later.
 
 ### 16. Provide Wireframes for your App.
-We created low-fidelity and high-fidelity wireframes. 
+We created low-fidelity wireframes for each of our six page types, in three different device sizes: desktop, tablet and mobile. 
+
+We also created the desktop versions in high-fidelity so we could see how our fonts and colours would work. 
 
 The wireframes can be viewed on the Figma board: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
 
