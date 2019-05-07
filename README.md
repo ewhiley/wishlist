@@ -174,8 +174,6 @@ The network infrastructure for this app includes the following services:
 - we used AWS S3 for storing image uploads since Heroku uses an 'ephemeral filesystem' so any user uploaded images on the Heroku filesystem are wiped out with every push
 
 ### 5. Identify and describe the software to be used in your App.
-We used the following software in the app:
-
 
 
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
@@ -242,7 +240,24 @@ https://user-images.githubusercontent.com/31295147/57002511-49c72380-6c03-11e9-8
 
 ### 18. Discuss how Agile methodology is being implemented in your project.
 
+We implemented the Agile methodology in the following ways:
+
+- conducting a two-week sprint 
+- getting a working prototype up and running in the first few days then following that up with an MVP and adding features as time allowed
+- constant communication with each other through standups, checkins, Slack, Trello 
+- reflecting each day and changing tac when needed
+- embracing change and going with it 
+- regularly pushing to Github
+- regularly deploying to Heroku for testing
+- each team member taking on multidisciplinary tasks
+- democratic process and decision-making
+
 ### 19. Provide an overview and description of your Source control process.
+
+We used Github to manage our source control because it allowed us to: 
+- keep a running version history of our code and our progress
+- review each others code
+- always be working on the same code, merge code and resolve any conflicts
 
 ### 20. Provide an overview and description of your Testing process.
 
