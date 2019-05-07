@@ -52,7 +52,7 @@ class WishlistsController < ApplicationController
   def destroy
     @wishlist = Wishlist.find(params[:id])
     @wishlist.destroy
-    flash[:danger] = "Wishlist was successfully deleted"
+    flash[:success] = "Wishlist was successfully deleted"
     
     redirect_to wishlists_path
   end
