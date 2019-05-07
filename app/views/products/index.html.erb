@@ -1,13 +1,15 @@
 <p class="myproducts-title">My Products</p>
-
-<ul>
-  <% @user.products.each do |product| %>
-    <% if product.sold == false %>
-      <li class="list-group-item">
-        <%= product.created_at.strftime("%d-%m-%Y") %>
-        <%= product.name %>
-        <%= link_to "Show Product", product_path(product)%>
-      </li>
+<div class="myproducts">
+  <ul class="myproducts-list">
+    <% @user.products.each do |product| %>
+      <% if product.sold == false %>
+        <li class="list-group-item product-listed">
+          <h5 class="product-list-item"><i class="fas fa-piggy-bank"></i><h5>
+          <h5 class="product-list-item"><%= product.created_at.strftime("%d-%m-%Y") %></h5>
+          <h5 class="product-list-item"><%= product.name %></h5>
+          <h5 class="product-list-item"><%= link_to "Show Product", product_path(product)%></h5>
+        </li>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
+</div>

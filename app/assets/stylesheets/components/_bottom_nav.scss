@@ -1,6 +1,9 @@
 .the-core-of-earth {
   height: 75px;
   background-color: #d60547;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,3 +46,4 @@ a.footer-wishlist {
   font-size: 20px;
   color: white;
 }
+
