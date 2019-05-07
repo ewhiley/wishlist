@@ -1,8 +1,20 @@
-<h1>My Wishlists</h1>
-
-<% @user.wishlists.each do |wishlist| %>
-  <% if wishlist.completed == false %>
-    <%= wishlist.name %>
-    <%= link_to "Show Wishlist", wishlist_path(wishlist)%> 
-  <% end %>
-<% end %>
+<p class="myproducts-title">My Wishlists</p>
+<div class="myproducts">
+  <ul class="myproducts-list">
+    <% @user.wishlists.each do |wishlist| %>
+      <% if wishlist.completed == false %>
+        <li class="list-group-item product-listed">
+          <div class="product-duo">
+            <h3 class="product-list-item-icon"><i class="fas fa-heart pink-pig"></i></h3>
+            <div class="separator">
+              <h5 class="product-list-item"><%= wishlist.created_at.strftime("%d-%m-%Y") %></h5>
+              <h5 class="product-list-item">Wishlist Name:</h5>
+              <h5 class="product-list-item"><%= wishlist.name %></h5>
+            </div>
+          </div>
+          <%= link_to "Show Matches", wishlist_path(wishlist), class: "btn btn-succes btn-yellow button products-button" %>
+        </li>      
+      <% end %>
+    <% end %>
+  </ul>
+</div>

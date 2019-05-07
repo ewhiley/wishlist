@@ -8,11 +8,11 @@
             <h3 class="product-list-item-icon"><i class="fas fa-piggy-bank pink-pig"></i></h3>
             <div class="separator">
               <h5 class="product-list-item"><%= product.created_at.strftime("%d-%m-%Y") %></h5>
-               <h5 class="product-list-item">Product Name:</h5>
+              <h5 class="product-list-item">Product Name:</h5>
               <h5 class="product-list-item"><%= product.name %></h5>
             </div>
           </div>
-          <%= link_to "Show Product", product_path(product), class: "btn btn-succes btn-yellow button products-button"%>
+          <%= link_to "Show Product", product_path(product), class: "btn btn-succes btn-yellow button products-button" %>
         </li>
       <% end %>
     <% end %>
