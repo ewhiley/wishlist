@@ -4,10 +4,15 @@
     <% @user.products.each do |product| %>
       <% if product.sold == false %>
         <li class="list-group-item product-listed">
-          <h5 class="product-list-item"><i class="fas fa-piggy-bank"></i><h5>
-          <h5 class="product-list-item"><%= product.created_at.strftime("%d-%m-%Y") %></h5>
-          <h5 class="product-list-item"><%= product.name %></h5>
-          <h5 class="product-list-item"><%= link_to "Show Product", product_path(product)%></h5>
+          <div class="product-duo">
+            <h3 class="product-list-item-icon"><i class="fas fa-piggy-bank pink-pig"></i></h3>
+            <div class="separator">
+              <h5 class="product-list-item"><%= product.created_at.strftime("%d-%m-%Y") %></h5>
+               <h5 class="product-list-item">Product Name:</h5>
+              <h5 class="product-list-item"><%= product.name %></h5>
+            </div>
+          </div>
+          <%= link_to "Show Product", product_path(product), class: "btn btn-succes btn-yellow button products-button"%>
         </li>
       <% end %>
     <% end %>

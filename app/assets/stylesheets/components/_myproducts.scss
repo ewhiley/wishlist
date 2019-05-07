@@ -1,7 +1,10 @@
 .myproducts-title {
   color: black;
-  font-size: 30px;
+  margin-top: 30px;
+  font-size: 25px;
   padding-left: 17px;
+  text-align: center;
+  color: #d60547;
 }
 
 .product-listed {
@@ -11,6 +14,7 @@
   margin-top: 30px;
   display: flex !important;
   align-items: center;
+  justify-content: space-between;
 }
 
 .myproducts-list {
@@ -18,8 +22,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 100px;
 }
 
 .product-list-item {
   margin-right: 20px;
+  margin-bottom: 0px;
+}
+
+.product-list-item-icon {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+
+.separator {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.pink-pig {
+  // color: #FBCA4D;
+  color: #d60547;
+}
+
+.products-button {
+  margin-top: 0px !important;
 }
