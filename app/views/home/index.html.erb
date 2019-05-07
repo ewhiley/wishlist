@@ -6,7 +6,7 @@
 <% if user_signed_in? == false %>
   <div class="row cards index-products">
     <% @products.each do |product| %>
-      <% if product.sold == false %>
+      <% if product.sold == false %>    
         <div class="col-sm-3">
           <div class="card card2">
             <% product.images.each do |image| %>
