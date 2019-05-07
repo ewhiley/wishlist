@@ -174,6 +174,9 @@ The network infrastructure for this app includes the following services:
 - we used AWS S3 for storing image uploads since Heroku uses an 'ephemeral filesystem' so any user uploaded images on the Heroku filesystem are wiped out with every push
 
 ### 5. Identify and describe the software to be used in your App.
+We used the following software in the app:
+
+
 
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
 
@@ -193,9 +196,16 @@ The network infrastructure for this app includes the following services:
 
 ### 14. Provide your database schema design.
 
+
 ### 15. Provide User stories for your App.
 
+
 ### 16. Provide Wireframes for your App.
+We created low-fidelity and high-fidelity wireframes. 
+
+The wireframes can be viewed on the Figma board: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
+
+Or pdf: [Figma_board_Optimize.pdf](https://github.com/ewhiley/wishlist/files/3145064/Figma_board_Optimize.pdf) 
 
 ### 17. Describe the way tasks are allocated and tracked in your project.
 

@@ -8,7 +8,6 @@ class WishlistsController < ApplicationController
 
   def new
     @wishlist = Wishlist.new
-    check_user(@wishlist)
     @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
