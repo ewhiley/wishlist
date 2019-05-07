@@ -2,27 +2,43 @@
 
 <% @user.wishlists.each do |wishlist| %>
   <% if wishlist.completed == true %>
+    <h1>Wishlist</h1>
     <div class="field"><%= wishlist.name %></div>
     <div class="field"><%= wishlist.description %></div>
     <div class="field"><%= wishlist.price %></div><br><br>
     <% pur = Purchase.find_by(wishlist_id: wishlist.id) %>
     <% pro = Product.find_by(id: pur.product_id) %>
+    <h1>Product</h1>
     <div class="field"></p><%= pro.name %></div>
     <div class="field"><%= pro.description %></div>
     <div class="field"><%= pro.price %></div>
     <% user = User.find(pro.user_id)  %>
-    <div class="field"><%= user.name %></div>
-    <div class="field"><%= user %></div>
-    <div class="field"><%= user.name %></div>
-    
+    <h1>Seller</h1>
+    <div class="field"><%= user.profile.name %></div>
+    <div class="field"><% user.profile.phone_no %></div>
+    <div class="field"><%= user.profile.street_number %></div>
+    <div class="field"><%= user.profile.street_address %></div>
+    <div class="field"><%= user.profile.suburb %></div>
+    <div class="field"><%= user.profile.postcode %></div>
+    <div class="field"><%= user.profile.state %></div>
   <% end %>
 <% end %>
 
 <h1>Purchases without wishlists</h1>
 <% @purchases.each do |purchase| %>
-  <% if purchase.buyer_id == @user.id && purchase.wishlist_id == nil%>
-    <p><%= Product.find(purchase.buyer_id).name %></p>
-    <p><%= Product.find(purchase.buyer_id).description %></p>
-    <p><%= Product.find(purchase.buyer_id).price %></p>
+  <% if purchase.buyer_id == @user.id && purchase.wishlist_id == nil %>
+    <p><%= Product.find(purchase.product_id).name %></p>
+    <p><%= Product.find(purchase.product_id).description %></p>
+    <p><%= Product.find(purchase.product_id).price %></p>
+    <% pro2 = Product.find_by(id: purchase.product_id) %>
+    <% user_no_wishlist = User.find(pro2.user_id)  %>
+    <h1>Seller</h1>
+    <div class="field"><%= user_no_wishlist.profile.name %></div>
+    <div class="field"><% user_no_wishlist.profile.phone_no %></div>
+    <div class="field"><%= user_no_wishlist.profile.street_number %></div>
+    <div class="field"><%= user_no_wishlist.profile.street_address %></div>
+    <div class="field"><%= user_no_wishlist.profile.suburb %></div>
+    <div class="field"><%= user_no_wishlist.profile.postcode %></div>
+    <div class="field"><%= user_no_wishlist.profile.state %></div>
   <% end %>
 <% end %>

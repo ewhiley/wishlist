@@ -1,4 +1,5 @@
 class WishlistsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @wishlists = Wishlist.all
     @user = current_user
@@ -7,6 +8,7 @@ class WishlistsController < ApplicationController
 
   def new
     @wishlist = Wishlist.new
+    check_user(@wishlist)
     @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
@@ -35,6 +37,7 @@ class WishlistsController < ApplicationController
 
   def edit
     @wishlist = Wishlist.find(params[:id])
+    check_user(@wishlist)
     @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
@@ -61,6 +64,14 @@ class WishlistsController < ApplicationController
   private
   def wishlist_params
     params.require(:wishlist).permit(:name, :description, :price, images: [], category_ids: [])
+  end
+
+  def check_user(wishlist)
+    if current_user.id != wishlist.user_id
+      flash[:notice] = "You are not authorized to view that content"
+      redirect_to root_path
+      return
+    end
   end
 end
 
