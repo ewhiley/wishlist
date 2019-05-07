@@ -1,4 +1,5 @@
 class PurchasesController < ApplicationController
+  before_action :authenticate_user!
   def show
     @product = Product.find(params[:id])
     @wishlist = Wishlist.find(params[:wishlist_id])
@@ -73,5 +74,14 @@ class PurchasesController < ApplicationController
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to purchase_path(@product)
+  end
+
+  private
+  def check_user(purchase)
+    if current_user.id != purchase.buyer_id
+      flash[:notice] = "You are not authorized to view that content"
+      redirect_to root_path
+      return
+    end
   end
 end

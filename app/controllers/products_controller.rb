@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @products = Product.all
     @user = current_user
@@ -20,10 +21,12 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    check_user(@product)
   end
 
   def edit
     @product = Product.find(params[:id])
+    check_user(@product)
   end
 
   def update
@@ -48,5 +51,13 @@ class ProductsController < ApplicationController
   private
   def product_params
     params.require(:product).permit(:name, :description, :price, images: [], category_ids: [])
+  end
+
+  def check_user(product)
+    if current_user.id != product.user_id
+      flash[:notice] = "You are not authorized to view that content"
+      redirect_to root_path
+      return
+    end
   end
 end
