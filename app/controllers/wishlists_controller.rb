@@ -23,6 +23,7 @@ class WishlistsController < ApplicationController
 
   def show
     @wishlist = Wishlist.find(params[:id])
+    check_user(@wishlist)
     @matches = []
     @wishlist_categories = @wishlist.categories
     @w_cat_ids = @wishlist_categories.ids
