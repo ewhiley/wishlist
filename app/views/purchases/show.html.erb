@@ -1,5 +1,24 @@
-<h1>Buy This Now</h1>
-
-<p><%= @product.name %></p>
-<p><%= @product.description %></p>
-<%= render 'layouts/shared/stripe.html.erb', obj: @product %>
+<div class="products-container">  
+  <div class="product-show">
+    <div class="product-show-details">
+      <h3><%= @product.name %></h3>
+      <div class="description-box">
+        <% description_array = @product.description.split(".") %>
+        <% description_array.each do |string| %>
+          <p><%= string %></p>
+        <% end %>
+      </div>
+      <h5 class="product-price">Price $<%= '%.2f' % @product.price %></h5>
+      <%= render 'layouts/shared/stripe.html.erb', obj: @product %>
+    </div>
+    <div id="carousel-products" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+      <% @product.images.each.with_index(0) do |image, index| %>
+        <div class="carousel-item <%= index.zero? ? 'active' : '' %>">
+            <%= image_tag(image, class: 'd-block w-100 sizing') %>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
