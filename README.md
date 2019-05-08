@@ -38,7 +38,7 @@ Users can:
 
 The app includes the following features:
 - Secure payment with Stripe
-- Authentication and authorisation with Devise and CanCan
+- Authentication and authorisation with Devise
 - Email automation with Mailgun
 - Image upload
 - Category data sanitisation through search and filter feature
@@ -163,7 +163,7 @@ Ability to:
 
 The app includes the following features:
 - Secure payment with Stripe
-- Authentication and authorisation with Devise and CanCan
+- Authentication and authorisation with Devise 
 - Email automation with Mailgun
 - Image upload
 - Category data sanitisation through search and filter feature
@@ -175,6 +175,19 @@ The network infrastructure for this app includes the following services:
 
 ### 5. Identify and describe the software to be used in your App.
 
+We used the following tech stack: 
+- Ruby on Rails for framework
+- PostgreSQLfor database
+- Heroku for deployment
+- AWS S3 for storing image uploads
+- HTML and ERB for frontend
+- SCSS for frontend
+- Javascript for frontend
+- Bootstrap for frontend
+- Git for version control
+- Github for version control
+- Devise for authentication and authorisation
+- Mailgun for mail automation
 
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
 
