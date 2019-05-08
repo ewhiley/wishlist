@@ -38,7 +38,7 @@ Users can:
 
 The app includes the following features:
 - Secure payment with Stripe
-- Authentication and authorisation with Devise and CanCan
+- Authentication and authorisation with Devise
 - Email automation with Mailgun
 - Image upload
 - Category data sanitisation through search and filter feature
@@ -91,7 +91,7 @@ Friday | Finalise README, presentaion |
 ### Screenshots of Trello board(s)
 We kept track of our tasks using trello (screenshot below)
 
-Every morning, we had a team standup and updated the Trello board to reflet what we had done and what we were working on. We then reported our progress to the class standup. 
+Every morning, we had a team standup and updated the Trello board to reflect what we had done and what we were working on. We then reported our progress to the class standup. 
 
 <img width="1254" alt="Trello board" src="https://user-images.githubusercontent.com/31295147/57002511-49c72380-6c03-11e9-85bc-113ff6804202.png">
 
@@ -163,7 +163,7 @@ Ability to:
 
 The app includes the following features:
 - Secure payment with Stripe
-- Authentication and authorisation with Devise and CanCan
+- Authentication and authorisation with Devise 
 - Email automation with Mailgun
 - Image upload
 - Category data sanitisation through search and filter feature
@@ -175,7 +175,27 @@ The network infrastructure for this app includes the following services:
 
 ### 5. Identify and describe the software to be used in your App.
 
+We used the following tech stack: 
+- Ruby on Rails for framework
+- PostgreSQLfor database
+- Heroku for deployment
+- AWS S3 for storing image uploads
+- HTML and ERB for frontend
+- SCSS for frontend
+- Javascript for frontend
+- Bootstrap for frontend
+- Git for version control
+- Github for version control
+- Devise for authentication and authorisation
+- Mailgun for mail automation
+
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
+
+We chose to use PostgreSQL because 
+- supported from Rails
+- supported from Heroku (no need for any gems or adaptors)
+- provides a good range of data types
+- scalable
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
 
@@ -194,14 +214,69 @@ The network infrastructure for this app includes the following services:
 ### 14. Provide your database schema design.
 
 ### 15. Provide User stories for your App.
+#### Buyer
+As a buyer, I want to: 
+- browse products and only sign up or sign in when I’m ready to purchase
+- sign up easily
+- make purchases easily and view my purchases later.
+
+#### Wishlister
+As a wishlister, I want to:
+- browse products and only sign up or sign in when I’m ready to create a wishlist
+- sign up easily
+- add products to my wishlist and see current matches
+- sign in later to see new matches
+- make purchases easily and to view my purchases later.
+
+#### Seller
+As a seller, I want to:
+- be a buyer or a seller without having to have a special seller account
+- sign up easily
+- list my products for sale and manage my products
+- leave the transaction to the website (not worry about cash purchases)
+- view my sales later.
 
 ### 16. Provide Wireframes for your App.
+We created low-fidelity wireframes for each of our six page types, in three different device sizes: desktop, tablet and mobile. 
+
+We also created the desktop versions in high-fidelity so we could see how our fonts and colours would work. 
+
+The wireframes can be viewed on the Figma board: https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
+
+Or pdf: [Figma_board_Optimize.pdf](https://github.com/ewhiley/wishlist/files/3145064/Figma_board_Optimize.pdf) 
 
 ### 17. Describe the way tasks are allocated and tracked in your project.
 
+Each morning, we met face-to-face and discussed the tasks to be done and allocated them according to our time and abilities. We took it in turns to go to the class standup and report back. 
+
+We team-coded from time to time but, given the time constraints and the number of tasks, we needed to split a lot of the work up. 
+
+During the week, we sat next to each other and regularly checked in with each other, as we had completed tasks or if we were having trouble/had questions about tasks. On the weekends, we checked in via Slack. 
+
+We tracked tasks to be done, in progress, and completed via our Trello board: 
+
+https://user-images.githubusercontent.com/31295147/57002511-49c72380-6c03-11e9-85bc-113ff6804202.png 
+
 ### 18. Discuss how Agile methodology is being implemented in your project.
 
+We implemented the Agile methodology in the following ways:
+
+- conducting a two-week sprint 
+- getting a working prototype up and running in the first few days then following that up with an MVP and adding features as time allowed
+- constant communication with each other through standups, checkins, Slack, Trello 
+- reflecting each day and changing tac when needed
+- embracing change and going with it 
+- regularly pushing to Github
+- regularly deploying to Heroku for testing
+- each team member taking on multidisciplinary tasks
+- democratic process and decision-making
+
 ### 19. Provide an overview and description of your Source control process.
+
+We used Github to manage our source control because it allowed us to: 
+- keep a running version history of our code and our progress
+- review each others code
+- always be working on the same code, merge code and resolve any conflicts
 
 ### 20. Provide an overview and description of your Testing process.
 
