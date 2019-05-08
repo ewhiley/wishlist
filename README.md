@@ -385,8 +385,34 @@ We used Github to manage our source control because it allowed us to:
 
 ### 20. Provide an overview and description of your Testing process.
 
+Throughout the development process we continually tested as we built, including:
+
+- checking through the rails console to ensure database behaviour was as expected
+- testing each feature as it was built
+- testing on different computers
+- testing our "happy path" based on our user stories, then testing the app with different data than was expected
+- testing while logged in to make sure all paths were accessible
+- testing while logged out to ensure restricted paths were not accessible (e.g. my wishlist, my products, edit paths, etc.)
+- testing that a logged in user could not access the product listing of another user 
+- deploying once or twice a day and testing on Heroku. 
+
 ### 21. Discuss and analyse requirements related to information system security.
+
+Some important information system security requirements for this app were to:
+
+- keep user product and wishlist only accessible to them
+- keep user profile data only accessible to them
+- keep passwords safe
+- keep payments secure
 
 ### 22. Discuss methods you will use to protect information and data.
 
+To protect information and data, we implemented the following: 
+- Used Stripe for payments: data is encrypted and secured through Stripe. 
+- Required account authentication so only users can access their profile and product listings
+- Collected only the data we really needed from users and provided users with the ability to edit or delete their account. 
+- Used Heroku for deployment, which also provides user data protection and backups of the database
+
+
 ### 23. Research what your legal obligations are in relation to handling user data.
+
