@@ -175,7 +175,7 @@ The network infrastructure for this app includes the following services:
 
 ### 5. Identify and describe the software to be used in your App.
 
-We used the following tech stack: 
+We used the following: 
 - Ruby on Rails for framework
 - PostgreSQLfor database
 - Heroku for deployment
@@ -189,6 +189,7 @@ We used the following tech stack:
 - Devise for authentication and authorisation
 - Mailgun for mail automation
 - Stripe to provide a secure payment system
+- Gems: devise, strip, money-rails, jquery, chosen
 
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
 
@@ -217,12 +218,12 @@ The Models represent the business logic, the Views display the information to th
 
 #### Models
 We have the following models: 
-- Product
+- Product for product sales
 - Product category
-- User 
-- Profile
-- Purchase
-- Wishlist
+- User for user registration data
+- Profile for user profile
+- Purchase for transactions
+- Wishlist for wishlist listing
 - Wishlist category
 
 #### Views
@@ -267,11 +268,55 @@ We used the following third-party services:
 
 ### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
 
+Our app is most similar to eBay because their data structure would have the following models:
+- users: sellers and buyers
+- products
+- categories
+- purchase data
+
+It is also similar in that products need to be linked to their categories and users to their products sales and purchases.
+
 ### 12. Discuss the database relations to be implemented.
+- A user needs to be able to have both products (sales) and wishlists. 
+- The user also need to be connected with their profile.
+
+- In order to find matches: 
+  - both the products and the wishlists will need to have their own categories tables  
+  - these will need to be joined through one general category table.
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
+A product: 
+- belongs to a user
+- has many product categories
+- has many categories, through product categories
+- has many images attached, all of which are destroyed with the product
+
+A product category:
+- belongs to a product
+- belongs to a category
+
+A wishlist: 
+- belongs to a user
+- has many wishlist categories
+- has many categories through wishlist categories
+- has many images attached, all of which are destroyed with the wishlist
+
+A wishlist category:
+- belongs to a wishlist 
+- belongs to a category
+
+A Category: 
+- has many product categories and has many products through product categories
+
+A user:
+- has many products
+- has many wishlists
+- has one profile
 
 ### 14. Provide your database schema design.
+Our schema design is shown in our Entity Relationship Diagram.
+
+![Entity relationship diagram](https://user-images.githubusercontent.com/31295147/57003582-2b652600-6c0b-11e9-9533-559735c9e9bc.png)
 
 ### 15. Provide User stories for your App.
 #### Buyer
