@@ -208,7 +208,45 @@ $heroku run rake db:migrate
 ```
 This populated our production database with the same database structure that we had in our development database.
 
+For further information about our database design, see questions 12-14.
+
 ### 8. Describe the architecture of your App.
+Our app follows the Model-View-Controller architecture of Rails Apps. 
+
+The Models represent the business logic, the Views display the information to the user, and the Controllers interface between the Models, Views and database.
+
+#### Models
+We have the following models: 
+- Product
+- Category
+- Product category
+- User 
+- Profile
+- Purchase
+- Wishlist
+- Wishlist category
+
+#### Views
+We have the following View folders:
+- **Devise:** Has many views for the collection and handling of user registrations.
+- **Home:** Contains the view for our index page.
+- **Shared:** Contains the partials and views that are shared in the application
+- **Products:** Views for creating, viewing and editing products
+- **Wishlists:** Views for creating, viewing and editing wishlists
+- **Profiles** Views for creating, viewing and editing profiles
+- **Purchases:** Views for managing purchases
+- **Users:** Views for user history
+
+#### Controllers
+We have the following controllers:
+- **Wishlists:** CRUD functions on Wishlists
+- **Products:** CRUD functions on Products
+- **Users:** For displaying user history
+- **Profiles:** CRUD functions on profiles
+- **Home:** For loading products on home
+- **Confirmation** To sign user in after confirmation
+- **Application** Redirects to products after sign in
+
 
 ### 9. Explain the different high-level components (abstractions) in your App.
 
