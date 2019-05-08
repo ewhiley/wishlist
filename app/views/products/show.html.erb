@@ -1,33 +1,36 @@
-<div class="product-show">
-  <div class="product-show-details">
-    <h3><%= @product.name %></h3>
-    <div class="description-box">
-      <% description_array = @product.description.split(".") %>
-      <% description_array.each do |string| %>
-        <p><%= string %></p>
-      <% end %>
-    </div>
-    <h5 class="product-price">Price $<%= '%.2f' % @product.price %></h5>
-    <p class="product-update-button-top"><%= link_to edit_product_path(@product), class:'btn btn-yellow product-button' do %>
-          <span class="far fa-edit"></span>
-          Edit product
-        <% end %>
-    </p>
-    <p><%= link_to product_path(@product),
-        method: :delete,
-        data: { confirm: '  Are you sure?' }, class: 'btn btn-danger product-button' do %>
-          <span class="fa fa-trash-alt"></span>
-            Delete product
-        <% end %>
-    </p>
-  </div>
-  <div id="carousel-products" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-     <% @product.images.each.with_index(0) do |image, index| %>
-      <div class="carousel-item <%= index.zero? ? 'active' : '' %>">
-          <%= image_tag(image, class: 'd-block w-100 sizing') %>
+<div class="products-container">
+    <div class="product-show">
+      <div class="product-show-details">
+        <h3><%= @product.name %></h3>
+        <div class="description-box">
+          <% description_array = @product.description.split(".") %>
+          <% description_array.each do |string| %>
+            <p><%= string %></p>
+          <% end %>
+        </div>
+        <h5 class="product-price">Price $<%= '%.2f' % @product.price %></h5>
+        <p class="product-update-button-top"><%= link_to edit_product_path(@product), class:'btn btn-yellow product-button' do %>
+              <span class="far fa-edit"></span>
+              Edit product
+            <% end %>
+        </p>
+        <p><%= link_to product_path(@product),
+            method: :delete,
+            data: { confirm: '  Are you sure?' }, class: 'btn btn-danger product-button' do %>
+              <span class="fa fa-trash-alt"></span>
+                Delete product
+            <% end %>
+        </p>
       </div>
-    <% end %>
+      <div id="carousel-products" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+        <% @product.images.each.with_index(0) do |image, index| %>
+          <div class="carousel-item <%= index.zero? ? 'active' : '' %>">
+              <%= image_tag(image, class: 'd-block w-100 sizing') %>
+          </div>
+        <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
