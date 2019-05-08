@@ -1,3 +1,35 @@
 // Place all the styles related to the profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.new-profile-form {
+  display: flex;
+  justify-content: center;
+}
+
+.new-profile-form-container {
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5;
+  padding: 30px;
+  margin-bottom: 70px;
+  flex-direction: column;
+}
+
+.profile-title {
+  margin-top: 15px;
+  font-size: 27px;
+  color: #d60547;
+}
+
+.profile-subtitle {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+.form-group {
+    display: flex !important;
+    flex-direction: column;
+    margin-top: 15px;
+}

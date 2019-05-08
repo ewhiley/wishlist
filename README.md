@@ -192,12 +192,13 @@ We used the following tech stack:
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
 
 We chose to use PostgreSQL because 
-- supported from Rails
-- supported from Heroku (no need for any gems or adaptors)
+- supported by Rails
+- supported by Heroku (no need for any gems or adaptors)
 - provides a good range of data types
 - scalable
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
+
 
 ### 8. Describe the architecture of your App.
 
