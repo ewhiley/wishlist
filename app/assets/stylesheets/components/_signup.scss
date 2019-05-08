@@ -36,6 +36,10 @@
   align-items: center;
 }
 
+.signup-input {
+  width: 200px !important;
+}
+
 .login {
   width: 40%;
   // border-left: 1px solid black;
@@ -68,4 +72,16 @@
 
 .images-label {
   width: 125px;
+}
+
+.edit-height {
+  height: 700px;
+}
+
+.cancel-button {
+  width: 200px;
+}
+
+.update-button {
+  margin-bottom: 30px;
 }
