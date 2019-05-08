@@ -1,12 +1,27 @@
-<h1>Product Show</h1>
+<div class="product-show">
+  <div class="product-show-details">
+      <h1><%= @product.name %></h1>
+          <p><%= @product.description %></p>
+          <p> $<%= '%.2f' % @product.price %></p>
 
-<p><%= link_to "Edit Product Details", edit_product_path(@product) %></p>
-<p><%= link_to 'Delete Product', product_path(@product),
+          <p><%= link_to edit_product_path(@product), class:'btn btn-yellow' do %>
+              <span class="far fa-edit"></span>
+                Edit product
+              <% end %>
+          </p>
+          
+          <p><%= link_to product_path(@product),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></p>
-<p><%= @product.name %></p>
-<p><%= @product.description %></p>
-<p>$<%= '%.2f' % @product.price %></p>
-<% @product.images.each do |image| %>
-  <%= image_tag image %>
-<% end %>
+              data: { confirm: '  Are you sure?' }, class: 'btn btn-danger' do %>
+                <span class="fa fa-trash-alt"></span>
+                  Delete product
+              <% end %>
+          </p>
+  </div>
+    <div class="image">
+            <% @product.images.each do |image| %>
+                <%= image_tag image %>
+              <% end %>
+    </div> 
+  
+</div>
