@@ -188,23 +188,39 @@ We used the following tech stack:
 - Github for version control
 - Devise for authentication and authorisation
 - Mailgun for mail automation
+- Stripe to provide a secure payment system
 
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
 
-We chose to use PostgreSQL because 
-- supported by Rails
-- supported by Heroku (no need for any gems or adaptors)
+We chose to use PostgreSQL because it
+- is supported by Rails
+- is supported by Heroku (no need for any gems or adaptors)
 - provides a good range of data types
-- scalable
+- is scalable
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
 
+We chose PostgreSQL because it was compatible with Heroku (where we deployed). Heroku created a new database for us when we deployed so we ran 
+
+```
+$heroku run rake db:migrate 
+
+```
+This populated our production database with the same database structure that we had in our development database.
 
 ### 8. Describe the architecture of your App.
 
 ### 9. Explain the different high-level components (abstractions) in your App.
 
 ### 10. Detail any third party services that your App will use.
+We used the following third-party services:
+- Heroku for deployment
+- AWS S3 for storing image uploads
+- Bootstrap for frontend
+- Github for version control and collaboration
+- Devise for authentication and authorisation
+- Mailgun for mail automation
+- Stripe to provide a secure payment system
 
 ### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
 
