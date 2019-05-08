@@ -416,3 +416,15 @@ To protect information and data, we implemented the following:
 
 ### 23. Research what your legal obligations are in relation to handling user data.
 
+We have many legal obligations in relation to how we collect and handle personal information imposed by the Privacy Act and the Australian Privacy Principles, found in Schedule 1 of the Privacy Act.
+
+In summary, we need to: 
+
+- make our privacy policy available
+- only collect the data we need for the business activity
+- take steps to protect the information we collect and hold
+- take steps to ensure the data is correct and up-to-date and correct it if it isn't
+- give users access to their data
+- de-identify information where possible
+- have a system to handle complaints
+- not disclose the information for any other purposes, except in limited circumstances, without the individual's consent
