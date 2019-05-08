@@ -218,7 +218,6 @@ The Models represent the business logic, the Views display the information to th
 #### Models
 We have the following models: 
 - Product
-- Category
 - Product category
 - User 
 - Profile
@@ -247,8 +246,14 @@ We have the following controllers:
 - **Confirmation** To sign user in after confirmation
 - **Application** Redirects to products after sign in
 
-
 ### 9. Explain the different high-level components (abstractions) in your App.
+The Models in our app act as abstractions for database tables, for example:
+- The user and profile models represent the data relating to the users
+- The product and wishlist models represent the data relating to these products
+
+- The views are grouped into categories that relate directly to the models. The shared layouts are built as partials so they can be used across other views. 
+
+- The controllers in the app act as abstractions for the database actions. They allow us to interact with the tables in our database using Ruby.
 
 ### 10. Detail any third party services that your App will use.
 We used the following third-party services:
