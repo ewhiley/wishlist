@@ -1,7 +1,7 @@
 <div class="products-container wishlist-history-container">
   <h1 class="head-wishlist-title">Wishlist History</h1>
   <div class="product-show">
-    <% pro2 = 0 %>
+    <% pro2 = [] %>
     <% @user.wishlists.each do |wishlist| %>
       <% if wishlist.completed == true %>
         <div class="product-show-details">
