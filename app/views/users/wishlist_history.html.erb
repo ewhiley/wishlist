@@ -1,44 +1,149 @@
-<h1>Wishlist History</h1>
+<div class="products-container wishlist-history-container">
+  <h2 class="head-wishlist-title">Wishlist History</h2>
+  <div class="product-show">
+    <% pro2 = 0 %>
+    <% @user.wishlists.each do |wishlist| %>
+      <% if wishlist.completed == true %>
+        <div class="product-show-details">
+          <h2 class="wishlist-history-sub-title sofia">Wishlist</h2>
+          <h3><%= wishlist.name.capitalize %></h3>
+          <div class="description-box">
+            <% description_array = wishlist.description.split(".") %>
+            <% description_array.each do |string| %>
+              <p><%= string %></p>
+           <% end %>
+          </div>
+          <h5 class="product-price">Price $<%= '%.2f' % wishlist.price %></h5>
+        </div> 
+        <div class="wishlist-purchase-product">    
+          <% pur = Purchase.find_by(wishlist_id: wishlist.id) %>
+          <% pro = Product.find_by(id: pur.product_id) %>
+          <h2 class="wishlist-history-sub-title sofia">Your Purchase</h2>
+          <h3><%= pro.name.capitalize %></h3>
+          <div class="description-box">
+            <% description_array2 = pro.description.split(".") %>
+            <% description_array2.each do |string| %>
+              <p><%= string %></p>
+            <% end %>
+          </div>
+          <h5 class="product-price">Price $<%= '%.2f' % pro.price %></h5>
+          <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#exampleModal2">
+            Seller details
+          </button>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#exampleModal1">
+            Images
+          </button>
 
-<% @user.wishlists.each do |wishlist| %>
-  <% if wishlist.completed == true %>
-    <h1>Wishlist</h1>
-    <div class="field"><%= wishlist.name %></div>
-    <div class="field"><%= wishlist.description %></div>
-    <div class="field"><%= wishlist.price %></div><br><br>
-    <% pur = Purchase.find_by(wishlist_id: wishlist.id) %>
-    <% pro = Product.find_by(id: pur.product_id) %>
-    <h1>Product</h1>
-    <div class="field"></p><%= pro.name %></div>
-    <div class="field"><%= pro.description %></div>
-    <div class="field"><%= pro.price %></div>
-    <% user = User.find(pro.user_id)  %>
-    <h1>Seller</h1>
-    <div class="field"><%= user.profile.name %></div>
-    <div class="field"><% user.profile.phone_no %></div>
-    <div class="field"><%= user.profile.street_number %></div>
-    <div class="field"><%= user.profile.street_address %></div>
-    <div class="field"><%= user.profile.suburb %></div>
-    <div class="field"><%= user.profile.postcode %></div>
-    <div class="field"><%= user.profile.state %></div>
-  <% end %>
-<% end %>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content wishlist-modal">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel1">Purchase Images</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                   <div id="carousel-products-wishlist-images" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner-wishlist-images">
+                      <% pro.images.each.with_index(0) do |image, index| %>
+                        <div class="carousel-item-wishlist-images <%= index.zero? ? 'active' : '' %>">
+                            <%= image_tag(image, class: 'd-block w-100 sizing') %>
+                        </div>
+                      <% end %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% user = User.find(pro.user_id)  %>
+        <!-- Button trigger modal -->
 
-<h1>Purchases without wishlists</h1>
-<% @purchases.each do |purchase| %>
-  <% if purchase.buyer_id == @user.id && purchase.wishlist_id == nil %>
-    <p><%= Product.find(purchase.product_id).name %></p>
-    <p><%= Product.find(purchase.product_id).description %></p>
-    <p><%= Product.find(purchase.product_id).price %></p>
-    <% pro2 = Product.find_by(id: purchase.product_id) %>
-    <% user_no_wishlist = User.find(pro2.user_id)  %>
-    <h1>Seller</h1>
-    <div class="field"><%= user_no_wishlist.profile.name %></div>
-    <div class="field"><% user_no_wishlist.profile.phone_no %></div>
-    <div class="field"><%= user_no_wishlist.profile.street_number %></div>
-    <div class="field"><%= user_no_wishlist.profile.street_address %></div>
-    <div class="field"><%= user_no_wishlist.profile.suburb %></div>
-    <div class="field"><%= user_no_wishlist.profile.postcode %></div>
-    <div class="field"><%= user_no_wishlist.profile.state %></div>
-  <% end %>
-<% end %>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Seller details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="field"><%= user.profile.name %></div>
+                  <div class="field"><% user.profile.phone_no %></div>
+                  <div class="field"><%= user.profile.street_number %></div>
+                  <div class="field"><%= user.profile.street_address %></div>
+                  <div class="field"><%= user.profile.suburb %></div>
+                  <div class="field"><%= user.profile.postcode %></div>
+                  <div class="field"><%= user.profile.state %></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<h2 class="head-wishlist-title text-center">Purchases without Wishlist</h2>
+<div class="products-container">
+  <div class="product-show">
+    <div class="product-show-details">
+      <% @purchases.each do |purchase| %>
+        <% if purchase.buyer_id == @user.id && purchase.wishlist_id == nil %>
+          <% product = Product.find(purchase.product_id) %>
+          <h3><%= product.name %></h3>
+          <div class="description-box">
+            <% description_array = product.description.split(".") %>
+            <% description_array.each do |string| %>
+              <p><%= string %></p>
+            <% end %>
+          </div>
+          <% pro2 = Product.find_by(id: purchase.product_id) %>
+          <% user_no_wishlist = User.find(pro2.user_id)  %>
+          <h5 class="product-price">Price $<%= '%.2f' % product.price %></h5>
+          <button type="button" class="btn btn-yellow wishlist-history-button-margin" data-toggle="modal" data-target="#exampleModal3">
+            Seller details
+          </button>
+          <% pro2 = Product.find_by(id: purchase.product_id) %>
+          <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Seller details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="field"><%= user_no_wishlist.profile.name %></div>
+                  <div class="field"><% user_no_wishlist.profile.phone_no %></div>
+                  <div class="field"><%= user_no_wishlist.profile.street_number %></div>
+                  <div class="field"><%= user_no_wishlist.profile.street_address %></div>
+                  <div class="field"><%= user_no_wishlist.profile.suburb %></div>
+                  <div class="field"><%= user_no_wishlist.profile.postcode  %></div>
+                  <div class="field"><%= user_no_wishlist.profile.state %></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div id="carousel-products" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <% pro2.images.each.with_index(0) do |image, index| %>
+          <div class="carousel-item <%= index.zero? ? 'active' : '' %>">
+            <%= image_tag(image, class: 'd-block w-100 sizing') %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
