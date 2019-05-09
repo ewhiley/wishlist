@@ -1,20 +1,44 @@
-<h1>Edit Profile</h1>
+<h1 class="profile-title text-center">My Profile</h1>
+  <div class="new-profile-form">
+    <div class="new-profile-form-container">
+      <%= form_with model: @profile, local: true  do |form| %>
+       <div class="form-group-new">
+          <%= form.label :name %>
+          <%= form.text_field :name, class: "form-control", placeholder: "Name"%>
+        </div>
 
- <%= form_with model: @profile, local: true  do |form| %>
-  <p><%= form.label :name %>
-  <%= form.text_field :name %></p>
-  <p><%= form.label :phone_no %>:
-  <%= form.telephone_field :phone_no %></p>
-  <p><%= form.label :street_number %>
-  <%= form.text_field :street_number %>
-  <p><%= form.label :street_address %>
-  <%= form.text_field :street_address %></p>
-  <p><%= form.label :suburb %>
-  <%= form.text_field :suburb %></p>
-  <%= form.label :state %>
-  <%= form.select :state, "<option>New South Wales</option>Victoria<option>Queensland</option><option>Western Australia</option><option>South Australia</option><option>Tasmania</option><option>Australian Capital Territory</option><option>Northern Territory</option>".html_safe  %>
-  <p><%= form.label :postcode %>
-  <%= form.text_field :postcode %></p>
-  <%#= form.text_field :category_ids, multiple: true %>
-  <%= form.submit %>
-<% end %>
+        <div class="form-group form-group-new">
+          <%= form.label :phone_no %>
+          <%= form.telephone_field :phone_no, class: "form-control", placeholder: "Phone"%>
+        </div>
+
+        <div class="form-group form-group-new">
+          <%= form.label :street_number %>
+          <%= form.text_field :street_number, class: "form-control", placeholder: "Street number" %>
+        </div>
+
+        <div class="form-group form-group-new">
+          <%= form.label :street_address %>
+          <%= form.text_field :street_address, class: "form-control", placeholder: "Street address" %>
+        </div>
+
+      <div class="form-group form-group-new">
+        <%= form.label :suburb %>
+        <%= form.text_field :suburb, class: "form-control", placeholder: "Suburb" %>
+      </div>
+
+      <div class="form-group form-group-new form-group-state">
+        <%= form.label :state %>
+        <%= form.select :state, "<option>New South Wales</option>Victoria<option>Queensland</option><option>Western Australia</option><option>South Australia</option><option>Tasmania</option><option>Australian Capital Territory</option><option>Northern Territory</option>".html_safe  %>
+      </div>
+
+      <div class="form-group form-group-new">
+        <%= form.label :postcode %>
+        <%= form.text_field :postcode, class: "form-control", placeholder: "Postcode" %>
+      </div>
+
+        <%#= form.text_field :category_ids, multiple: true %>
+        <%= form.submit "Save", class: "btn btn-yellow" %>
+      <% end %>
+    </div>
+  </div>
