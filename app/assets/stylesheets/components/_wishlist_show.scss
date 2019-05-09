@@ -20,6 +20,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 40px 40px;
   background-color: #f5f5f5;
   margin-bottom: 70px;
 }
@@ -32,7 +33,7 @@
 .head-wishlist-title {
   color:#d60547;
   font-family: 'Sofia', cursive;
-  // text-align: center;
+  text-align: center;
   margin-top: 30px;
 }
 
@@ -60,4 +61,8 @@
   background-image: asset_url('adobe_ad.gif');
   width: 728px;
   height: 90px;
+}
+
+.wishlist-show-card {
+  margin-top: 20px;
 }

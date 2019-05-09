@@ -1,9 +1,10 @@
-<div class="products-container wishlist-history-container">
+
   <h1 class="head-wishlist-title">Wishlist History</h1>
-  <div class="product-show">
     <%# pro2 = 0 %>
     <% @user.wishlists.each do |wishlist| %>
       <% if wishlist.completed == true %>
+      <div class="products-container wishlist-history-container">
+       <div class="product-show">
         <div class="product-show-details">
           <h2 class="wishlist-history-sub-title sofia">Wishlist</h2>
           <h3><%= wishlist.name.capitalize %></h3>
@@ -87,10 +88,11 @@
             </div>
           </div>
         </div>
+        </div>
+        </div>
       <% end %>
     <% end %>
-  </div>
-</div>
+
 
 <h1 class="head-wishlist-title text-center">Purchases without Wishlist</h1>
 <div class="products-container">
