@@ -21,22 +21,22 @@
 
         <div class="form-group form-group-new">
           <%= form.label :street_address %>
-          <%= form.text_field :street_address, class: "form-control", placeholder: "Street number" %>
+          <%= form.text_field :street_address, class: "form-control", placeholder: "Street address" %>
         </div>
 
       <div class="form-group form-group-new">
         <%= form.label :suburb %>
-        <%= form.text_field :suburb, class: "form-control", placeholder: "Street number" %>
+        <%= form.text_field :suburb, class: "form-control", placeholder: "Suburb" %>
       </div>
 
-      <div class="form-group form-group-new">
+      <div class="form-group form-group-new form-group-state">
       <%= form.label :state %>
         <%= form.select :state, "<option>New South Wales</option>Victoria<option>Queensland</option><option>Western Australia</option><option>South Australia</option><option>Tasmania</option><option>Australian Capital Territory</option><option>Northern Territory</option>".html_safe  %>
       </div>
 
       <div class="form-group form-group-new">
         <%= form.label :postcode %>
-        <%= form.text_field :postcode %>
+        <%= form.text_field :postcode, class: "form-control", placeholder: "Postcode" %>
       </div>
 
         <%#= form.text_field :category_ids, multiple: true %>
