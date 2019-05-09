@@ -1,55 +1,63 @@
 <h1 class="profile-title text-center">My Profile</h1>
-<div class="new-profile-form">
-  <div class="new-profile-form-container">
+
   <% if @user.profile == nil %>
-      <p class="profile-subtitle">You don't have a profile - create one now!</p>
-      <%= form_with model: @profile, local: true  do |form| %>
-        <div class="form-group-new">
-          <%= form.label :name %>
-          <%= form.text_field :name, class: "form-control", placeholder: "Name"%>
+  
+    <div class="new-profile-form">
+    
+      <div class="new-profile-form-container">
+        <p class="profile-subtitle">You don't have a profile - create one now!</p>
+        <%= form_with model: @profile, local: true  do |form| %>
+        
+          <div class="form-group-new">
+            <%= form.label :name %>
+            <%= form.text_field :name, class: "form-control", placeholder: "Name"%>
+          </div>
+
+          <div class="form-group form-group-new">
+            <%= form.label :phone_no %>
+            <%= form.telephone_field :phone_no, class: "form-control", placeholder: "Phone"%>
+          </div>
+
+          <div class="form-group form-group-new">
+            <%= form.label :street_number %>
+            <%= form.text_field :street_number, class: "form-control", placeholder: "Street number" %>
+          </div>
+
+          <div class="form-group form-group-new">
+            <%= form.label :street_address %>
+            <%= form.text_field :street_address, class: "form-control", placeholder: "Street address" %>
+          </div>
+
+          <div class="form-group form-group-new">
+            <%= form.label :suburb %>
+            <%= form.text_field :suburb, class: "form-control", placeholder: "Suburb" %>
+          </div>
+
+        <div class="form-group form-group-new form-group-state">
+          <%= form.label :state %>
+          <%= form.select :state, "<option>New South Wales</option>Victoria<option>Queensland</option><option>Western Australia</option><option>South Australia</option><option>Tasmania</option><option>Australian Capital Territory</option><option>Northern Territory</option>".html_safe  %>
         </div>
 
         <div class="form-group form-group-new">
-          <%= form.label :phone_no %>
-          <%= form.telephone_field :phone_no, class: "form-control", placeholder: "Phone"%>
+          <%= form.label :postcode %>
+          <%= form.text_field :postcode, class: "form-control", placeholder: "Postcode" %>
         </div>
-
-        <div class="form-group form-group-new">
-          <%= form.label :street_number %>
-          <%= form.text_field :street_number, class: "form-control", placeholder: "Street number" %>
-        </div>
-
-        <div class="form-group form-group-new">
-          <%= form.label :street_address %>
-          <%= form.text_field :street_address, class: "form-control", placeholder: "Street address" %>
-        </div>
-
-      <div class="form-group form-group-new">
-        <%= form.label :suburb %>
-        <%= form.text_field :suburb, class: "form-control", placeholder: "Suburb" %>
-      </div>
-
-      <div class="form-group form-group-new form-group-state">
-        <%= form.label :state %>
-        <%= form.select :state, "<option>New South Wales</option>Victoria<option>Queensland</option><option>Western Australia</option><option>South Australia</option><option>Tasmania</option><option>Australian Capital Territory</option><option>Northern Territory</option>".html_safe  %>
-      </div>
-
-      <div class="form-group form-group-new">
-        <%= form.label :postcode %>
-        <%= form.text_field :postcode, class: "form-control", placeholder: "Postcode" %>
-      </div>
 
         <%#= form.text_field :category_ids, multiple: true %>
         <%= form.submit "Save", class: "btn btn-yellow" %>
-      <% end %>
-    <% elsif %>
-    
-      <div class="card">
+      </div>  
+    </div>    
+  <% end %>
+  <% elsif %>
+  
+  <div class="new-profile-form">
+    <div class="profile-container">
+      <div class="card profile-card">
         <h5 class="card-header"><%= @user.profile.name %></h5>
         
         <div class="card-body profile-card-body">
 
-            <h5 class="card-title">Phone Number</h5>
+            <h5 class="card-title profile-card-title">Phone Number</h5>
             <p class="card-text"><%= @user.profile.phone_no %></p>
             
             <h5 class="card-title">Street Number</h5>
