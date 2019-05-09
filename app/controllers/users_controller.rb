@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
   def wishlist_history
     @user = current_user
-    @purchases = Purchase.all
+    @purchases = Purchase.all.order('created_at DESC')
   end
 
   def seller_history

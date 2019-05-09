@@ -1,6 +1,6 @@
 
 <h1 class="myproducts-title sofia">Sold Products</h1> 
-<% @user.products.each do |product| %>
+<% @user.products.order('created_at DESC').each do |product| %>
   <% if product.sold == true %>
     <div class="sold-products-container">
       <div class="product-show">
