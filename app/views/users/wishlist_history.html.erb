@@ -1,5 +1,5 @@
 <div class="products-container wishlist-history-container">
-  <h2 class="head-wishlist-title">Wishlist History</h2>
+  <h1 class="head-wishlist-title">Wishlist History</h1>
   <div class="product-show">
     <% pro2 = 0 %>
     <% @user.wishlists.each do |wishlist| %>
@@ -27,6 +27,7 @@
             <% end %>
           </div>
           <h5 class="product-price">Price $<%= '%.2f' % pro.price %></h5>
+          <small class="date-purchased">Date of Purchase <%= pro.created_at.strftime("%d-%m-%Y") %></small>
           <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#exampleModal2">
             Seller details
           </button>
@@ -40,7 +41,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content wishlist-modal">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel1">Purchase Images</h5>
+                  <h5 class="modal-title" id="exampleModalLabel1">Product Images</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -74,13 +75,13 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <div class="field"><%= user.profile.name %></div>
-                  <div class="field"><% user.profile.phone_no %></div>
-                  <div class="field"><%= user.profile.street_number %></div>
-                  <div class="field"><%= user.profile.street_address %></div>
-                  <div class="field"><%= user.profile.suburb %></div>
-                  <div class="field"><%= user.profile.postcode %></div>
-                  <div class="field"><%= user.profile.state %></div>
+                  <div class="field">Name: <%= user.profile.name %></div>
+                  <div class="field">Ph: <%= user.profile.phone_no %></div>
+                  <div class="field">Street No: <%= user.profile.street_number %></div>
+                  <div class="field">Street Address: <%= user.profile.street_address %></div>
+                  <div class="field">Suburb: <%= user.profile.suburb %></div>
+                  <div class="field">Postcode: <%= user.profile.postcode %></div>
+                  <div class="field">State: <%= user.profile.state %></div>
                 </div>
               </div>
             </div>
@@ -91,7 +92,7 @@
   </div>
 </div>
 
-<h2 class="head-wishlist-title text-center">Purchases without Wishlist</h2>
+<h1 class="head-wishlist-title text-center">Purchases without Wishlist</h1>
 <div class="products-container">
   <div class="product-show">
     <div class="product-show-details">
@@ -108,6 +109,7 @@
           <% pro2 = Product.find_by(id: purchase.product_id) %>
           <% user_no_wishlist = User.find(pro2.user_id)  %>
           <h5 class="product-price">Price $<%= '%.2f' % product.price %></h5>
+          <small class="date-purchased">Date of Purchase <%= pro2.created_at.strftime("%d-%m-%Y") %></small>
           <button type="button" class="btn btn-yellow wishlist-history-button-margin" data-toggle="modal" data-target="#exampleModal3">
             Seller details
           </button>
@@ -121,14 +123,14 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
-                  <div class="field"><%= user_no_wishlist.profile.name %></div>
-                  <div class="field"><% user_no_wishlist.profile.phone_no %></div>
-                  <div class="field"><%= user_no_wishlist.profile.street_number %></div>
-                  <div class="field"><%= user_no_wishlist.profile.street_address %></div>
-                  <div class="field"><%= user_no_wishlist.profile.suburb %></div>
-                  <div class="field"><%= user_no_wishlist.profile.postcode  %></div>
-                  <div class="field"><%= user_no_wishlist.profile.state %></div>
+                <div class="modal-body wishlist-modal-body">
+                  <div class="field">Name: <%= user_no_wishlist.profile.name %></div>
+                  <div class="field">Ph: <%= user_no_wishlist.profile.phone_no %></div>
+                  <div class="field">Street No: <%= user_no_wishlist.profile.street_number %></div>
+                  <div class="field">Street Address: <%= user_no_wishlist.profile.street_address %></div>
+                  <div class="field">Suburb: <%= user_no_wishlist.profile.suburb %></div>
+                  <div class="field">Postcode: <%= user_no_wishlist.profile.postcode  %></div>
+                  <div class="field">State: <%= user_no_wishlist.profile.state %></div>
                 </div>
               </div>
             </div>
