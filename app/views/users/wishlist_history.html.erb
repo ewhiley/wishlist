@@ -28,7 +28,7 @@
             <% end %>
           </div>
           <h5 class="product-price">Price $<%= '%.2f' % pro.price %></h5>
-          <small class="date-purchased">Date of Purchase <%= pro.created_at.strftime("%d-%m-%Y") %></small>
+          <small class="date-purchased">Date of Purchase: <%= pro.created_at.strftime("%d-%m-%Y") %></small>
           <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#exampleModal2">
             Seller details
           </button>
@@ -112,7 +112,7 @@
             <% pro2 = Product.find_by(id: purchase.product_id) %>
             <% user_no_wishlist = User.find(pro2.user_id)  %>
             <h5 class="product-price">Price $<%= '%.2f' % product.price %></h5>
-            <small class="date-purchased">Date of Purchase <%= pro2.created_at.strftime("%d-%m-%Y") %></small>
+            <small class="date-purchased">Date of Purchase: <%= pro2.created_at.strftime("%d-%m-%Y") %></small>
             <button type="button" class="btn btn-yellow wishlist-history-button-margin" data-toggle="modal" data-target="#exampleModal3">
               Seller details
             </button>

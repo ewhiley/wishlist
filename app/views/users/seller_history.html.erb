@@ -12,7 +12,8 @@
                 <p><%= string %></p>
               <% end %>
             </div>
-            
+            <% purchase = Purchase.find_by(product_id: product.id) %>
+            <small class="date-purchased">Date Sold: <%= purchase.created_at.strftime("%d-%m-%Y") %></small>
             <h5 class="product-price">Price $<%= '%.2f' % product.price %></h5>
           </div>
           <div id="carousel-products" class="carousel slide" data-ride="carousel">
