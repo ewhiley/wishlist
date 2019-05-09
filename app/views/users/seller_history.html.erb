@@ -1,10 +1,11 @@
 
 <h1 class="myproducts-title sofia">Sold Products</h1>
 
-  <div class="sold-products-container">
+ 
   
       <% @user.products.each do |product| %>
       <% if product.sold == true %>
+     <div class="sold-products-container">
           <div class="product-show">
           <div class="product-show-details">
             <h3><%= product.name %></h3>
@@ -26,7 +27,8 @@
               </div>
       </div>
     </div>
-    </div>
-<% end %>
-<% end %>
+  </div>
 </div>
+<% end %>
+<% end %>
+
