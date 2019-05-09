@@ -1,7 +1,7 @@
 <h1 class="myproducts-title sofia">My Products</h1>
 <div class="myproducts">
   <ul class="myproducts-list">
-    <% @user.products.each do |product| %>
+    <% @user.products.order('created_at DESC').each do |product| %>
       <% if product.sold == false %>
         <li class="list-group-item product-listed">
           <div class="product-duo">
