@@ -1,4 +1,4 @@
-<h1 class="profile-title text-center">My Profile</h1>
+<h1 class="profile-title sofia text-center">My Profile</h1>
 
 <% if @user.profile == nil %>
   
@@ -52,32 +52,25 @@
 
   <div class="new-profile-form">
     <div class="profile-container">
-      <div class="card profile-card">
-            <h5 class="card-header"><%= @user.profile.name %></h5>
+      <div class="profile-card">
+        <h5 class="profile-card-header"><%= @user.profile.name %></h5>
+        
+        <div class="card-body profile-card-body">
             
-            <div class="card-body profile-card-body">
+            <h5 class="profile-card-text">Address</h5>
+            <p class="card-text"><%= @user.profile.street_number %> <%= @user.profile.street_address %></p> 
+            <p class="card-text"><%= @user.profile.suburb %> </p>
+            <p class="card-text"><%= @user.profile.state %> </p>
+            <p class="card-text"><%= @user.profile.postcode %></p>
 
-                <h5 class="card-title profile-card-title">Phone Number</h5>
-                <p class="card-text"><%= @user.profile.phone_no %></p>
-                
-                <h5 class="card-title">Street Number</h5>
-                <p class="card-text"> <%= @user.profile.street_number %></p>
+            <h5 class="profile-card-text">Phone</h5>
+            <p class="card-text"><%= @user.profile.phone_no %></p>
 
-                <h5 class="card-title">Street Address</h5>
-                <p class="card-text"> <%= @user.profile.street_address %></p>
-
-                <h5 class="card-title">Suburb</h5>
-                <p class="card-text"> <%= @user.profile.suburb %></p>
-
-                <h5 class="card-title">Postcode</h5>
-                <p class="card-text"> <%= @user.profile.postcode %></p>
-
-                <h5 class="card-title">State</h5>
-                <p class="card-text"> <%= @user.profile.state %></p>
-
-                <%= link_to "Edit Profile", edit_profile_path(@profile), class: "btn btn-yellow" %>
-                <% end %>
+            <div class="profile-button">
+            <%= link_to "Edit Profile", edit_profile_path(@profile), class: "btn btn-yellow" %>
+            <% end %>
             </div>
+        </div>
       </div>
     </div>
-  </div>
+</div>

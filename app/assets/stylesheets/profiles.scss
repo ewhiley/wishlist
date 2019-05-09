@@ -17,8 +17,7 @@
 }
 
 .profile-title {
-  margin-top: 15px;
-  font-size: 27px;
+  margin: 15px 15px;
   color: #d60547;
 }
 
@@ -49,23 +48,49 @@
 
 .profile-field-header {
   margin-top: 15px;
-  font-size: 20px;
+  font-size: 30px;
   font-family: roboto;
 }
 
 .profile-container {
   width: 700px;
-  height: 700px;
+  // height: 700px;
   display: flex;
-  // justify-content: center;
-  background: #f5f5f5;
+  justify-content: center;
+  // background: #f5f5f5;
   padding: 30px;
   margin-bottom: 70px;
   flex-direction: column;
 }
 
 .profile-card {
-  height: 650px;
-  text-align: center;
+    height: 500px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 1px solid #FBCA4D;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+}
+
+.profile-card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #FBCA4D;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  color: #222222;
+}
+
+.profile-card-text {
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.profile-button {
+  margin-top: 50px;
 }
 
