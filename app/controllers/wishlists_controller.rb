@@ -18,7 +18,8 @@ class WishlistsController < ApplicationController
     @wishlist.save
     flash[:success] = "Wishlist successfully created"
 
-    redirect_to wishlist_path(@wishlist)
+    # redirect_to wishlist_path(@wishlist)
+    redirect_to my_wishlists_path
   end
 
   def show
@@ -27,7 +28,7 @@ class WishlistsController < ApplicationController
     @matches = []
     @wishlist_categories = @wishlist.categories
     @w_cat_ids = @wishlist_categories.ids
-    @products = Product.all
+    @products = Product.all.order('created_at DESC')
     @products.each do |product|
       if (product.categories.ids & @w_cat_ids).any? && product.user_id != @wishlist.user.id
         @matches << product
