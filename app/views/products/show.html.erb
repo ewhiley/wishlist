@@ -9,6 +9,7 @@
         <% end %>
       </div>
       <h5 class="product-price">Price $<%= '%.2f' % @product.price %></h5>
+      
       <p class="product-update-button-top"><%= link_to edit_product_path(@product), class:'btn btn-yellow product-button' do %>
             <span class="far fa-edit"></span>
             Edit product
