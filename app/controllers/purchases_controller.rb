@@ -31,9 +31,9 @@ class PurchasesController < ApplicationController
     @wishlist.toggle!(:completed)
    
     
-    flash[:success] = "Thank you for your purchase! We hope you enjoy #{@product.name}"
+    flash[:success] = "Thank you for your purchase #{@user.profile.name}! We hope you enjoy your new #{@product.name}. Check you Wishlist history to contact seller"
 
-    redirect_to my_wishlists_path
+    redirect_to my_wishlist_history_path
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to purchase_path(@product)
@@ -68,9 +68,9 @@ class PurchasesController < ApplicationController
 
     @product.toggle!(:sold)
    
-    flash[:success] = "Thank you for your purchase! We hope you enjoy #{@product.name}"
+    flash[:success] = "Thank you for your purchase #{@user.profile.name}! We hope you enjoy your new #{@product.name}. Check you Wishlist history to contact seller"
 
-    redirect_to my_wishlists_path
+    redirect_to my_wishlist_history_path
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to purchase_path(@product)
