@@ -71,10 +71,10 @@
   </div>
 </div>
 <p class="match-title text-center"><i class="fa fa-heart fa-2x"></i><span class="matches-wishlist-title"> Matches </span><i class="fa fa-heart fa-2x"></i></p>
-<div class="match-container container">
+<div class="match-container">
   <div class="row cards">                
     <% @matches.each do |match| %>
-      <div class="col-sm-3">
+      <div class="col-sm-3 wishlist-show-card">
         <div class="card" style="width: 18rem;">
           <% if match.images.any? %>
             <%= image_tag match.images.first, class: "card-img-top thumbnail" %>
@@ -82,10 +82,9 @@
           <%# <div class="description-box"> %>
           <div class="card-body">
             <h5 class="card-title"><%= match.name %></h5>
-            <% description_array2 = match.description.split(".") %>
-            <% description_array2.each do |string| %>
-              <p><%= string %></p>
-            <% end %>
+            <%# description_array2 = match.description.split(".") %>
+            <%# description_array2 do |string| %>
+            <%# end %>
             <h5 class="product-price">Price $<%= '%.2f' % match.price %></h5>
             <%= link_to "View", wishlist_purchase_path(@wishlist, match), class: "btn btn-yellow" %>
           </div>
