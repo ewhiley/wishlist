@@ -41,11 +41,11 @@
       <% if product.sold == false && product.user_id != current_user.id%>
         <div class="col-sm-3">
           <div class="card card2">
-            <% product.images.each do |image| %>
-              <%= image_tag image, class: "card-img-top thumbnail" %>
+            <% if product.images.any? %>
+              <%= image_tag product.images.first, class: "card-img-top thumbnail" %>
             <% end %>
             <div class="card-body">
-              <h4 class="card-title"><%= product.name %></h4>
+              <h5 class="card-title"><%= product.name %></h5>
               <p class="card-text">$<%= '%.2f' % product.price %></p>
               <%= link_to "Checkout Now", purchase_no_wishlist_path(product), class: "btn btn-succes btn-yellow" %>
             </div>
