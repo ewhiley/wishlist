@@ -193,7 +193,7 @@ We used the following:
 
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
 
-We chose to use PostgreSQL because it
+We chose to use PostgreSQL. Postgres might not have been as fast or simple as MySQL but it was superior for this project because it
 - is supported by Rails
 - is supported by Heroku (no need for any gems or adaptors)
 - provides a good range of data types
@@ -420,11 +420,11 @@ We have many legal obligations in relation to how we collect and handle personal
 
 In summary, we need to: 
 
-- make our privacy policy available
-- only collect the data we need for the business activity
-- take steps to protect the information we collect and hold
-- take steps to ensure the data is correct and up-to-date and correct it if it isn't
-- give users access to their data
-- de-identify information where possible
-- have a system to handle complaints
-- not disclose the information for any other purposes, except in limited circumstances, without the individual's consent
+- make our privacy policy available - this would need to be a future task for our app
+- only collect the data we need for the business activity - we have done this by only collecting user data that would be required
+- take steps to protect the information we collect and hold - we have done this (see above)
+- take steps to ensure the data is correct and up-to-date and correct it if it isn't - we would need to implement this after the product was launched
+- give users access to their data - we have done this (see above)
+- de-identify information where possible - we would need to implement this in the future
+- have a system to handle complaints - we would need to implement this in the future
+- not disclose the information for any other purposes, except in limited circumstances, without the individual's consent - we would need to implement this in the future
