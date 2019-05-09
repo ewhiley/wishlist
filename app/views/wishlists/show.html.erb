@@ -1,21 +1,96 @@
-<h1>Wishlist Show</h1>
-<% if @wishlist.completed == false %>
-  <%= @wishlist.user.id %>
-  <p><%= link_to "Edit Wishlist Details", edit_wishlist_path(@wishlist) %></p>
-  <p><%= link_to 'Delete Wishlist', wishlist_path(@wishlist),
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %></p>
-  <p><%= @wishlist.name %></p>
-  <p><%= @wishlist.description %></p>
-  <p>$<%= '%.2f' % @wishlist.price %></p>
-  <% @wishlist.categories.each do |c| %>
-    <p><%= c.name %></p>
-  <% end %>
-  <h1>These are your matches!</h1>
-  <% @matches.each do |match| %>
-    <p><%= match.name %></p>
-    <p><%= match.description %></p>
-    <p>$<%= '%.2f' % match.price %></p>
-    <p><%= link_to "Checkout", wishlist_purchase_path(@wishlist, match) %></p>
-  <% end %>
-<% end %>
+<div class="wishlist-container">
+  <h2 class="head-wishlist-title">Wishlist</h2>
+  <div class="wishlist-show">
+    <div class="product-show-details">
+      <% if @wishlist.completed == false %>
+        <h3><%= @wishlist.name %></h3>
+        <div class="description-box">
+          <% description_array = @wishlist.description.split(".") %>
+          <% description_array.each do |string| %>
+            <p><%= string %></p>
+          <% end %>
+        </div>
+        <h5 class="product-price">Price $<%= '%.2f' % @wishlist.price %></h5>
+        <p class="product-update-button-top"><%= link_to edit_wishlist_path(@wishlist), class:'btn btn-yellow product-button' do %>
+              <span class="far fa-edit"></span>
+              Edit wishlist
+            <% end %>
+        </p>
+        <p><%= link_to wishlist_path(@wishlist),
+            method: :delete,
+            data: { confirm: '  Are you sure?' }, class: 'btn btn-danger product-button' do %>
+              <span class="fa fa-trash-alt"></span>
+                Delete wishlist
+              <% end %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="site-section site-section-sm site-blocks-1 wishlist-separator">
+  <%# <div class="container"> %>
+    <div class="row separator">
+      <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4 aos-init aos-animate tags wishlist-inner" data-aos="fade-up" data-aos-delay="">
+        <div class="duo">
+          <div class="icon align-self-center">
+            <h2 class="font-awesome-icon"><i class="fa fa-heart"></i><h2>
+          </div>
+        </div>
+        <div class="text">
+          <p class="text-uppercase">Match</p>
+        </div>
+        <p class="separator-text">Submit your Wishlist and we match you instantly.</p>
+      </div>
+      <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4 aos-init aos-animate tags wishlist-inner" data-aos="fade-up" data-aos-delay="100">
+        <div class="duo">
+          <div class="icon align-self-center">
+            <h2 class="font-awesome-icon"><i class="fas fa-glasses"></i><h2>
+          </div>
+        </div>
+        <div class="text">
+          <p class="text-uppercase">VIEW</p>
+        </div>
+        <p class="separator-text">Like what you see? <br> Go ahead and view it!</p>
+      </div>
+      <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4 aos-init aos-animate tags wishlist-inner" data-aos="fade-up" data-aos-delay="200">
+        <div class="duo">
+          <div class="icon align-self-center">
+            <h2 class="font-awesome-icon heart"><i class="fas fa-shopping-cart"></i><h2>
+          </div>
+        </div>
+        <div class="text">
+          <p class="text-uppercase">BUY</p>
+        </div>
+        <p class="separator-text">Your purchase is one step away! <br> Buy it now!</p>
+      </div>
+    </div>
+  <%# </div> %>
+</div>
+<div class="banner3-container">
+  <div class="banner-ad3">
+  </div>
+</div>
+<p class="match-title text-center"><i class="fa fa-heart fa-2x"></i><span class="matches-wishlist-title"> Matches </span><i class="fa fa-heart fa-2x"></i></p>
+<div class="match-container container">
+  <div class="row cards">                
+    <% @matches.each do |match| %>
+      <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+          <% if match.images.any? %>
+            <%= image_tag match.images.first, class: "card-img-top thumbnail" %>
+          <% end %>
+          <%# <div class="description-box"> %>
+          <div class="card-body">
+            <h5 class="card-title"><%= match.name %></h5>
+            <% description_array2 = match.description.split(".") %>
+            <% description_array2.each do |string| %>
+              <p><%= string %></p>
+            <% end %>
+            <h5 class="product-price">Price $<%= '%.2f' % match.price %></h5>
+            <%= link_to "View", wishlist_purchase_path(@wishlist, match), class: "btn btn-yellow" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div> 
