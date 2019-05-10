@@ -48,7 +48,20 @@ The app includes the following features:
 <img width="1390" alt="home" src="https://user-images.githubusercontent.com/31295147/57507229-84d30080-7341-11e9-899a-755f8a48e35e.png">
 <img width="1375" alt="home2" src="https://user-images.githubusercontent.com/31295147/57507306-b8ae2600-7341-11e9-9cb1-5e14229843b2.png">
 <img width="1385" alt="home3" src="https://user-images.githubusercontent.com/31295147/57507371-e4c9a700-7341-11e9-84df-c6cafd238aeb.png">
+<img width="1392" alt="footer" src="https://user-images.githubusercontent.com/31295147/57507549-7a653680-7342-11e9-9374-a5bb3ab72ffc.png">
 
+#### Signup
+<img width="713" alt="sign-up" src="https://user-images.githubusercontent.com/31295147/57507636-b26c7980-7342-11e9-9984-6806c5df665b.png">
+<img width="915" alt="Confirmation" src="https://user-images.githubusercontent.com/31295147/57507663-c021ff00-7342-11e9-91d1-3f727142f3aa.png">
+
+#### Profile
+<img width="1396" alt="profile" src="https://user-images.githubusercontent.com/31295147/57507704-e051be00-7342-11e9-8fcd-be2a3199e2d9.png">
+<img width="1391" alt="profile_edit" src="https://user-images.githubusercontent.com/31295147/57507729-f0699d80-7342-11e9-985e-3243921e1d27.png">
+
+#### Product/Wishlist
+![new_product](https://user-images.githubusercontent.com/31295147/57507813-2e66c180-7343-11e9-9efe-bb11881623f2.png)
+![My_products](https://user-images.githubusercontent.com/31295147/57507850-48080900-7343-11e9-9492-d55b300e6081.png)
+![My_product](https://user-images.githubusercontent.com/31295147/57507880-58b87f00-7343-11e9-8d2d-ec32b629ce53.png)
 
 ### Tech stack (e.g. html, css, deployment platform, etc)
 The app has the following tech stack.
