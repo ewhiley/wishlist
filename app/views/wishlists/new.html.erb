@@ -9,7 +9,7 @@
       <div class="form-group-categories">
         <%= form.label :category_ids, "Categories" %>
         <%= form.select :category_ids,
-          Category.all.map { |k| [k.name, k.id] },
+          Category.all.order('name ASC').map { |k| [k.name, k.id] },
                           { include_blank: true },
                           { :multiple => true, class: 'chosen-select' }
         %>
