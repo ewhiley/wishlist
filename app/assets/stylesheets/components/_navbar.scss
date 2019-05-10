@@ -25,6 +25,12 @@ a.navbar-brand {
   font-size: 30px;
 }
 
+a.navbar-brand:hover {
+  color: #d60547 !important;
+  font-family: 'Sofia', cursive;
+  font-size: 32px;
+}
+
 a.skinny-button {
   width: 100px;
   height: 40px;
