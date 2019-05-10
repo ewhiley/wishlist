@@ -1,5 +1,5 @@
 
-  <h1 class="head-wishlist-title">Wishlist History</h1>
+  <p class="page-title">Wishlist History</p>
     <%# pro2 = 0 %>
     <% @user.wishlists.order('created_at DESC').each do |wishlist| %>
       <% if wishlist.completed == true %>
@@ -94,7 +94,7 @@
     <% end %>
 
 
-<h1 class="head-wishlist-title text-center">Purchases without Wishlist</h1>
+<p class="page-title">Purchases without Wishlist</p>
 <div class="products-container">
   <div class="product-show">
     <div class="product-show-details wishlist-adjustment">
