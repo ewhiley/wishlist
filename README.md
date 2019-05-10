@@ -44,7 +44,11 @@ The app includes the following features:
 - Category data sanitisation through search and filter feature
 
 ### Screenshots
-**NEED TO INCLUDE**
+#### Home page
+<img width="1390" alt="home" src="https://user-images.githubusercontent.com/31295147/57507229-84d30080-7341-11e9-899a-755f8a48e35e.png">
+<img width="1375" alt="home2" src="https://user-images.githubusercontent.com/31295147/57507306-b8ae2600-7341-11e9-9cb1-5e14229843b2.png">
+<img width="1385" alt="home3" src="https://user-images.githubusercontent.com/31295147/57507371-e4c9a700-7341-11e9-84df-c6cafd238aeb.png">
+
 
 ### Tech stack (e.g. html, css, deployment platform, etc)
 The app has the following tech stack.
