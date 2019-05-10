@@ -95,6 +95,8 @@ Every morning, we had a team standup and updated the Trello board to reflect wha
 
 <img width="1254" alt="Trello board" src="https://user-images.githubusercontent.com/31295147/57002511-49c72380-6c03-11e9-85bc-113ff6804202.png">
 
+<img width="1267" alt="trello" src="https://user-images.githubusercontent.com/31295147/57507162-42a9bf00-7341-11e9-93e6-d25adc9feb43.png">
+
 ## Design documentation
 Our design process is documented in our figma board
 https://www.figma.com/file/CRzT3j3jkgBQlPhhWkpp2SnK/Rails-app?node-id=0%3A1
