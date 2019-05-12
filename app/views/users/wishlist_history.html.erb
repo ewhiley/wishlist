@@ -5,7 +5,7 @@
       <% if wishlist.completed == true %>
       <div class="products-container wishlist-history-container">
        <div class="product-show">
-        <div class="product-show-details">
+        <div class="product-show-details extra-height">
           <h2 class="wishlist-history-sub-title sofia">Wishlist</h2>
           <h3><%= wishlist.name.capitalize %></h3>
           <div class="description-box">
@@ -16,7 +16,7 @@
           </div>
           <h5 class="product-price">Price $<%= '%.2f' % wishlist.price %></h5>
         </div> 
-        <div class="wishlist-purchase-product">    
+        <div class="wishlist-purchase-product extra-height">    
           <% pur = Purchase.find_by(wishlist_id: wishlist.id) %>
           <% pro = Product.find_by(id: pur.product_id) %>
           <h2 class="wishlist-history-sub-title sofia">Your Purchase</h2>
